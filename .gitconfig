@@ -1,38 +1,39 @@
 [user]
-	name = Sergej Tisen
-	email = sergej.tissen@gmail.com
+  name = Sergej Tisen
+  email = sergej.tissen@gmail.com
 [core]
-	editor = vim
-	autocrlf = input
+  editor = vim
+  autocrlf = input
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [color]
-	ui = auto
+  ui = auto
 [push]
-	default = simple
+  default = simple
 [alias]
-     lg = log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim white)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
-     s = status --short --branch
-     ca = commit -am
-     c = commit -m
-     co = checkout
-     com = checkout master
-     col = checkout -	
-     df = diff --word-diff
-     sh = show --histogram --word-diff
-     aa = !git add . && git status
-     au = !git add -u . && git status
-     st  = stash --include-untracked
-     sp = stash pop
-     mf = merge --ff-only
-     mt = merge --no-ff
-     qmf = "!git checkout $1;git mf @{-1}"
-     qmt = "!git checkout $1;git mt @{-1}"			
-     undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
+  lg = log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim white)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
+  s = status --short --branch
+  ca = commit -am
+  c = commit -m
+  co = checkout
+  com = checkout master
+  col = checkout -	
+  df = diff --word-diff
+  sh = show --histogram --word-diff
+  aa = !git add . && git status
+  au = !git add -u . && git status
+  st  = stash --include-untracked
+  sp = stash pop
+  mf = merge --ff-only
+  mt = merge --no-ff
+  qmf = "!git checkout $1;git mf @{-1}"
+  qmt = "!git checkout $1;git mt @{-1}"			
+  undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
+  work = "config --local user.email tissen@jochen-schweizer.de"
 [merge]
-	tool = kdiff3
-	keepBackup = false
+  tool = kdiff3
+  keepBackup = false
 [mergetool "kdiff3"]
-	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+  path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
 [diff]
-	algorithm = histogram
+  algorithm = histogram
