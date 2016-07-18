@@ -21,7 +21,8 @@ Plugin 'easymotion/vim-easymotion' "faster navigation <leader>motion /
 Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. ys... cs... ds...
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'tpope/vim-commentary' "comment, uncomment lines gc gcc
-
+Plugin 'vim-airline/vim-airline' "Statusbar
+Plugin 'tpope/vim-fugitive' "Git support
 call vundle#end()
 filetype plugin indent on
 " Brief help
@@ -46,6 +47,7 @@ set ttyfast "faster redrawing"
 set number "show actual line number in current line
 highlight LineNr ctermfg=grey
 set nolazyredraw "don't redraw while executing macros
+set t_Co=256
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
@@ -58,11 +60,14 @@ inoremap <c-s> <Esc>:w<CR>
 nnoremap <c-s> :w<CR>
 nnoremap <leader><cr> o<Esc>
 nnoremap <c-q> :qa<cr>
+"Navigate panes
 nnoremap <c-l> <c-w><right>
 nnoremap <c-h> <c-w><left>
 nnoremap <c-k> <c-w><up>
 nnoremap <c-j> <c-w><down>
-
+"Navigate Buffers
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -111,6 +116,11 @@ map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map n <Plug>(easymotion-next)
 map N <Plug>(easymotion-prev)
+
+" Airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
