@@ -4,13 +4,14 @@ alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ls='ls -GFh'
 alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
-cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
-alias ~="cd ~"                              # ~:            Go Home
-alias c='clear'                             # c:            Clear terminal display
-mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
+alias c='clear'                             # c: Clear terminal display
+
+cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
+mcd () { mkdir -p "$1" && cd "$1"; }        # mcd: Makes new Dir and jumps inside
+
 bind -r '\C-s'
 stty -ixon
 
@@ -23,6 +24,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 if [ "$(uname)" == "Darwin" ]; then
+
   # Do something under Mac OS X platform        
   trash () { command mv "$@" ~/.Trash ; }     # trash: Moves a file to the MacOS trash
   alias atom='open -a Atom'		    # atom: Opens Atom Editor
@@ -30,6 +32,7 @@ if [ "$(uname)" == "Darwin" ]; then
   export PATH="$PATH:/usr/local/bin/"
   export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+
   # Do something under GNU/Linux platform
   if [ -f ~/.bashrc ]; then
     source ~/.bashrc
