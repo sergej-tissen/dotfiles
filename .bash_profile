@@ -14,18 +14,24 @@ mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and ju
 bind -r '\C-s'
 stty -ixon
 
-# Mac Only
-trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
-alias atom='open -a Atom'		    # atom: 	    Opens Atom Editor
-alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 export PS1="\[\033[31m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[m\]$ "
-
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-export PATH="$PATH:/usr/local/bin/"
-export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+if [ "$(uname)" == "Darwin" ]; then
+  # Do something under Mac OS X platform        
+  trash () { command mv "$@" ~/.Trash ; }     # trash: Moves a file to the MacOS trash
+  alias atom='open -a Atom'		    # atom: Opens Atom Editor
+  alias f='open -a Finder ./' # f: Opens current directory in MacOS Finder
+  export PATH="$PATH:/usr/local/bin/"
+  export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  # Do something under GNU/Linux platform
+  if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+  fi
+fi
