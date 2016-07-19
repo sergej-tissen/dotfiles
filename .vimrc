@@ -146,6 +146,9 @@ let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
+" Vim-Tmux-Navigator
+let g:tmux_navigator_save_on_switch = 1
+
 " Tmuxline
 let g:tmuxline_powerline_separators = 0
 let g:tmuxline_preset = {
@@ -157,6 +160,12 @@ let g:tmuxline_preset = {
       \'x'    : '',
       \'y'    : '#W',
       \'z'    : '#H'}
+
+" Vimux
+map <leader>rs :call VimuxRunCommand("clear && npm start")<cr>
+map <leader>rt :call VimuxRunCommand("clear && npm test")<cr>
+map <leader>rw :call VimuxRunCommand("clear && npm run watch")<cr>
+map <leader>rw :call VimuxRunCommand("clear && npm run build")<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
