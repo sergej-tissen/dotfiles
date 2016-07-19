@@ -29,7 +29,6 @@ if [ "$(uname)" == "Darwin" ]; then
   trash () { command mv "$@" ~/.Trash ; }     # trash: Moves a file to the MacOS trash
   alias atom='open -a Atom'		    # atom: Opens Atom Editor
   alias f='open -a Finder ./' # f: Opens current directory in MacOS Finder
-  export PATH="$PATH:/usr/local/bin/"
   export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
