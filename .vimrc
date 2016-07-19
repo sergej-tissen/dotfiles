@@ -22,6 +22,7 @@ Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. ys... cs... ds...
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'tpope/vim-commentary' "comment, uncomment lines gc gcc
 Plugin 'vim-airline/vim-airline' "Statusbar
+Plugin 'edkolev/tmuxline.vim' "airline for tmux
 Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 Plugin 'benmills/vimux' "execute tmux command from vim
@@ -145,6 +146,17 @@ let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
+" Tmuxline
+let g:tmuxline_powerline_separators = 0
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'b'    : '#W',
+      \'c'    : '#H',
+      \'win'  : '#I #W',
+      \'cwin' : '#I #W',
+      \'x'    : '',
+      \'y'    : '#W',
+      \'z'    : '#H'}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
