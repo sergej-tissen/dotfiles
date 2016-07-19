@@ -23,6 +23,7 @@ Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'tpope/vim-commentary' "comment, uncomment lines gc gcc
 Plugin 'vim-airline/vim-airline' "Statusbar
 Plugin 'tpope/vim-fugitive' "Git support
+Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 call vundle#end()
 filetype plugin indent on
 " Brief help
@@ -64,10 +65,6 @@ nnoremap <c-s> :w<CR>
 nnoremap <leader><cr> o<Esc>
 nnoremap <c-q> :qa<cr>
 "Navigate panes
-nnoremap <c-l> <c-w><right>
-nnoremap <c-h> <c-w><left>
-nnoremap <c-k> <c-w><up>
-nnoremap <c-j> <c-w><down>
 "Navigate Buffers
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
