@@ -24,6 +24,8 @@ Plugin 'tpope/vim-commentary' "comment, uncomment lines gc gcc
 Plugin 'vim-airline/vim-airline' "Statusbar
 Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
+Plugin 'benmills/vimux' "execute tmux command from vim
+
 call vundle#end()
 filetype plugin indent on
 " Brief help
@@ -57,6 +59,8 @@ set secure
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = " "
+"Do not enter  Ex Mode
+nnoremap Q <nop>
 
 inoremap jj <Esc>
 inoremap <c-s> <Esc>:w<CR>
