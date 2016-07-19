@@ -106,6 +106,7 @@ let g:ctrlp_working_path_mode = 2
 " YCM
 nnoremap <silent><leader>ref :YcmCompleter GoTo<CR>
 nnoremap <leader>ren :YcmCompleter RefactorRename 
+set completeopt-=preview
 
 " Minimap
 let g:minimap_show='<leader>ms'
