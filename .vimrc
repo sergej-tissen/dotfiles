@@ -55,7 +55,7 @@ set t_Co=256
 "load local .vimrc files
 set exrc
 set secure
-
+set directory=~/.vim/.swapfiles//
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
