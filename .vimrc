@@ -117,6 +117,7 @@ let g:minimap_toggle='<leader>mm'
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
 nmap <leader>s <Plug>(easymotion-s2)
+omap <leader>s <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
@@ -162,10 +163,10 @@ let g:tmuxline_preset = {
       \'z'    : '#H'}
 
 " Vimux
-map <leader>rs :call VimuxRunCommand("clear && npm start")<cr>
-map <leader>rt :call VimuxRunCommand("clear && npm test")<cr>
-map <leader>rw :call VimuxRunCommand("clear && npm run watch")<cr>
-map <leader>rw :call VimuxRunCommand("clear && npm run build")<cr>
+map <leader>rs :wa <bar> :call VimuxRunCommand("clear && npm start")<cr>
+map <leader>rt :wa <bar> :call VimuxRunCommand("clear && npm test")<cr>
+map <leader>rw :wa <bar> :call VimuxRunCommand("clear && npm run watch")<cr>
+map <leader>rb :wa <bar> :call VimuxRunCommand("clear && npm run build")<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
