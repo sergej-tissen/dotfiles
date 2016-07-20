@@ -22,6 +22,7 @@ Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. ys... cs... ds...
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'tpope/vim-commentary' "comment, uncomment lines gc gcc
 Plugin 'vim-airline/vim-airline' "Statusbar
+Plugin 'vim-airline/vim-airline-themes' "Theme for airline 
 Plugin 'edkolev/tmuxline.vim' "airline for tmux
 Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
@@ -125,6 +126,7 @@ map n <Plug>(easymotion-next)
 map N <Plug>(easymotion-prev)
 
 " Airline
+let g:airline_theme =  'bubblegum'
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 if !exists('g:airline_symbols')
