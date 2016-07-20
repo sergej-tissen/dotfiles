@@ -41,6 +41,7 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a "enable mouse support
 set clipboard=unnamed "copy to system clipboard
+set wildmenu "command-line completion with <tab>
 filetype plugin indent on "indent automaticly
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab "Tab is 2 spaces
 set autoread "reload file when changed externally
@@ -56,21 +57,29 @@ set t_Co=256
 "load local .vimrc files
 set exrc
 set secure
+set dy+=lastline "show last line if it's too long
+"save tmp files in external folders
 set directory=~/.vim/.swapfiles//
+set undodir=~/.vim/.undo// 
+"save undos
+set undofile
+"goto last position when file was left
+au BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = " "
 "Do not enter  Ex Mode
 nnoremap Q <nop>
-
+"Do not use for scroll. Use as tmux prefix
+nnoremap <c-f> <nop>
 inoremap jj <Esc>
 inoremap <c-s> <Esc>:w<CR>
 
 nnoremap <c-s> :w<CR>
 nnoremap <leader><cr> o<Esc>
 nnoremap <c-q> :qa<cr>
-"Navigate panes
 "Navigate Buffers
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>

@@ -7,3 +7,4 @@ ln -sv ~/.dotfiles/.tern-config ~
 ln -sv ~/.dotfiles/.bashrc ~
 ln -sv ~/.dotfiles/.tmux.conf ~
 mkdir ~/.vim/.swapfiles
+mkdir ~/.vim/.undo
