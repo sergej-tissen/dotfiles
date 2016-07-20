@@ -22,7 +22,7 @@ Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. ys... cs... ds...
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'tpope/vim-commentary' "comment, uncomment lines gc gcc
 Plugin 'vim-airline/vim-airline' "Statusbar
-Plugin 'vim-airline/vim-airline-themes' "Theme for airline 
+Plugin 'vim-airline/vim-airline-themes' "Theme for airline
 Plugin 'edkolev/tmuxline.vim' "airline for tmux
 Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
@@ -60,7 +60,7 @@ set secure
 set dy+=lastline "show last line if it's too long
 "save tmp files in external folders
 set directory=~/.vim/.swapfiles//
-set undodir=~/.vim/.undo// 
+set undodir=~/.vim/.undo//
 "save undos
 set undofile
 "goto last position when file was left
@@ -165,8 +165,8 @@ let g:tmux_navigator_save_on_switch = 1
 let g:tmuxline_powerline_separators = 0
 let g:tmuxline_preset = {
       \'a'    : '#S',
-      \'b'    : '#W',
-      \'c'    : '#H',
+      \'b'    : '',
+      \'c'    : '',
       \'win'  : '#I #W',
       \'cwin' : '#I #W',
       \'x'    : '',
