@@ -12,8 +12,23 @@ alias c='clear'                             # c: Clear terminal display
 cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd: Makes new Dir and jumps inside
 
+tmux-dev () {
+  folderName=${PWD##*/} 
+  echo ${folderName}
+  tmux new -s "${folderName}" -n dev -d 
+  tmux new-window -t "${folderName}:2" -n "etc"
+  tmux select-window -t "${folderName}:1"
+  tmux split-window -v -p 20
+  tmux select-pane -t 1
+  tmux send-keys 'vim' Enter
+  tmux -2 attach-session -t "${folderName}"
+}
+
 bind -r '\C-s'
 stty -ixon
+
+# Don't close Terminal with C-d
+set -o ignoreeof
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
