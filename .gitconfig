@@ -11,7 +11,7 @@
 [push]
   default = simple
 [alias]
-  lg = log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim white)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
+  lg = log --all --graph --pretty='format:%C(auto)%h%d %s  %C(magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
   s = status --short --branch
   ca = commit -am
   c = commit -m
