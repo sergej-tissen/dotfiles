@@ -27,6 +27,7 @@ Plugin 'edkolev/tmuxline.vim' "airline for tmux
 Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 Plugin 'benmills/vimux' "execute tmux command from vim
+Plugin 'mileszs/ack.vim' "search in all files
 
 call vundle#end()
 filetype plugin indent on
@@ -117,7 +118,7 @@ let g:ctrlp_working_path_mode = 2
 
 " YCM
 nnoremap <silent><leader>ref :YcmCompleter GoTo<CR>
-nnoremap <leader>ren :YcmCompleter RefactorRename 
+nnoremap <leader>ren :YcmCompleter RefactorRename<Space>
 set completeopt-=preview
 
 " Minimap
@@ -178,6 +179,13 @@ map <leader>rs :wa <bar> :call VimuxRunCommand("clear && npm start")<cr>
 map <leader>rt :wa <bar> :call VimuxRunCommand("clear && npm test")<cr>
 map <leader>rw :wa <bar> :call VimuxRunCommand("clear && npm run watch")<cr>
 map <leader>rb :wa <bar> :call VimuxRunCommand("clear && npm run build")<cr>
+
+" Ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep --hidden'
+endif
+cnoreabbrev Ack Ack!
+nnoremap <Leader>p :Ack!<Space>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
