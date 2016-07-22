@@ -182,7 +182,7 @@ map <leader>rb :wa <bar> :call VimuxRunCommand("clear && npm run build")<cr>
 
 " Ack.vim
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep --hidden'
+  let g:ackprg = 'ag --vimgrep --hidden --ignore-dir .git'
 endif
 cnoreabbrev Ack Ack!
 nnoremap <Leader>p :Ack!<Space>
