@@ -31,6 +31,7 @@ Plugin 'mileszs/ack.vim' "search in all files
 Plugin 'SirVer/ultisnips' "snippet Entgine
 Plugin 'honza/vim-snippets' "snippets
 Plugin 'isRuslan/vim-es6' "es6 snippets
+Plugin 'scrooloose/syntastic' "eslint
 
 call vundle#end()
 filetype plugin indent on
@@ -195,6 +196,17 @@ nnoremap <Leader>p :Ack!<Space>
 let g:UltiSnipsExpandTrigger="<C-c>"
 let g:UltiSnipsJumpForwardTrigger="<C-c>"
 let g:UltiSnipsJumpBackwardTrigger="<C-x>"
+
+" Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+
+nnoremap <leader>ll :lnext<CR>
+nnoremap <leader>lp :lprev<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions

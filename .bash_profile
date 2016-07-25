@@ -12,6 +12,7 @@ alias ag='ag --hidden'                      # include dotfiles
 cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd: Makes new Dir and jumps inside
 
+alias tmk='tmux kill-session'
 tmd () {
   folderName=${PWD##*/} 
   echo ${folderName}
