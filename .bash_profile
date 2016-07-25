@@ -12,7 +12,7 @@ alias ag='ag --hidden'                      # include dotfiles
 cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd: Makes new Dir and jumps inside
 
-tmux-dev () {
+tmd () {
   folderName=${PWD##*/} 
   echo ${folderName}
   tmux new -s "${folderName}" -n dev -d 
