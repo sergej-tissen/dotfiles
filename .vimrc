@@ -16,7 +16,6 @@ Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
 Plugin 'Xuyuanp/nerdtree-git-plugin' "git symbols in nerdtree
 Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file (leader)<c-p>
 Plugin 'Valloric/YouCompleteMe' "Code completion
-Plugin 'severin-lemaignan/vim-minimap' "Minimap <leader>mm
 Plugin 'easymotion/vim-easymotion' "faster navigation <leader>motion /
 Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. ys... cs... ds...
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
@@ -125,10 +124,6 @@ let g:ctrlp_working_path_mode = 2
 nnoremap <silent><leader>ref :YcmCompleter GoTo<CR>
 nnoremap <leader>ren :YcmCompleter RefactorRename<Space>
 set completeopt-=preview
-
-" Minimap
-let g:minimap_show='<leader>ms'
-let g:minimap_toggle='<leader>mm'
 
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
