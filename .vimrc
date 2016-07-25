@@ -66,6 +66,7 @@ set undodir=~/.vim/.undo//
 set undofile
 "goto last position when file was left
 au BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
+set ff=unix
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
