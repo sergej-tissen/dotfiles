@@ -28,6 +28,9 @@ Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 Plugin 'benmills/vimux' "execute tmux command from vim
 Plugin 'mileszs/ack.vim' "search in all files
+Plugin 'SirVer/ultisnips' "snippet Entgine
+Plugin 'honza/vim-snippets' "snippets
+Plugin 'isRuslan/vim-es6' "es6 snippets
 
 call vundle#end()
 filetype plugin indent on
@@ -187,6 +190,12 @@ if executable('ag')
 endif
 cnoreabbrev Ack Ack!
 nnoremap <Leader>p :Ack!<Space>
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<C-c>"
+let g:UltiSnipsJumpForwardTrigger="<C-c>"
+let g:UltiSnipsJumpBackwardTrigger="<C-x>"
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
