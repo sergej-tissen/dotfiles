@@ -102,9 +102,6 @@ nmap <silent> <c-n> :NERDTreeToggle<cr>
 nmap <silent> <leader><c-n> :NERDTreeFind<cr>
 "close VIM if only NERDTree is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"open NERDTree if vim is started without any file specified: $ .vim
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " CtrlP
 nmap <silent> <leader><c-p> :CtrlPBuffer<cr>
@@ -174,12 +171,6 @@ let g:tmuxline_preset = {
       \'y'    : '#W',
       \'z'    : '#H'}
 
-" Vimux
-map <leader>rs :wa <bar> :call VimuxRunCommand("clear && npm start")<cr>
-map <leader>rt :wa <bar> :call VimuxRunCommand("clear && npm test")<cr>
-map <leader>rw :wa <bar> :call VimuxRunCommand("clear && npm run watch")<cr>
-map <leader>rb :wa <bar> :call VimuxRunCommand("clear && npm run build")<cr>
-
 " Ack.vim
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --hidden --ignore-dir .git'
@@ -198,7 +189,6 @@ let g:syntastic_loc_list_height = 5
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
-"let g:syntastic_javascript_checkers = ['eslint'] "add this in the project specific .vimrc
 
 nnoremap <leader>ll :lnext<CR>
 nnoremap <leader>lp :lprev<CR>
@@ -206,3 +196,14 @@ nnoremap <leader>lp :lprev<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Local .vimrc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"let g:syntastic_javascript_checkers = ['eslint'] "run eslint
+"map <leader>rs :wa <bar> :call VimuxRunCommand('clear && npm start')<cr>
+"map <leader>rt :wa <bar> :call VimuxRunCommand('clear && npm test')<cr>
+"map <leader>rw :wa <bar> :call VimuxRunCommand('clear && npm run watch')<cr>
+"map <leader>rb :wa <bar> :call VimuxRunCommand('clear && npm run build')<cr>
+"map <leader>rr :w <bar> :call VimuxRunCommand('clear && node ' .  bufname('%'))<cr>
