@@ -89,5 +89,6 @@ fi
 if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-setxkbmap -option 'caps:ctrl_modifier'
-xcape -e 'Control_L=Escape'
+# capslock as esc and ctrl
+#setxkbmap -option 'caps:ctrl_modifier'
+#xcape -e 'Control_L=Escape'
