@@ -33,7 +33,6 @@ Plugin 'isRuslan/vim-es6' "es6 snippets
 Plugin 'scrooloose/syntastic' "eslint
 
 call vundle#end()
-filetype plugin indent on
 " Brief help
 " :PluginList - lists configured plugins
 " :PluginInstall - installs plugins; append `!` to update or just :PluginUpdate
