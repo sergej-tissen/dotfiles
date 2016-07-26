@@ -47,6 +47,7 @@ set clipboard=unnamed "copy to system clipboard
 set wildmenu "command-line completion with <tab>
 filetype plugin indent on "indent automaticly
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab "Tab is 2 spaces
+autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
 set autoread "reload file when changed externally
 set backspace=indent,eol,start "sane backspace
 set magic "regex
