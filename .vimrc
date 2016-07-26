@@ -54,6 +54,7 @@ set magic "regex
 set encoding=utf8
 syntax enable "syntax highlighting
 set ttyfast "faster redrawing"
+set ttimeoutlen=0
 set number "show actual line number in current line
 highlight LineNr ctermfg=grey
 set nolazyredraw "don't redraw while executing macros
