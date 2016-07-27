@@ -56,7 +56,9 @@ syntax enable "syntax highlighting
 set ttyfast "faster redrawing"
 set ttimeoutlen=0
 set number "show actual line number in current line
-highlight LineNr ctermfg=grey
+highlight LineNr ctermfg=darkgrey
+set cursorline
+highlight CursorLine cterm=none ctermbg=235
 set nolazyredraw "don't redraw while executing macros
 set t_Co=256
 "load local .vimrc files
