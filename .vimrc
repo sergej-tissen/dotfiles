@@ -43,7 +43,7 @@ call vundle#end()
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a "enable mouse support
-set clipboard=unnamedplus "copy to system clipboard
+set clipboard=unnamed "copy to system clipboard
 set wildmenu "command-line completion with <tab>
 filetype plugin indent on "indent automaticly
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab "Tab is 2 spaces
