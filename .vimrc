@@ -51,28 +51,29 @@ autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
 set autoread "reload file when changed externally
 set backspace=indent,eol,start "sane backspace
 set magic "regex
+set ff=unix
 set encoding=utf8
-syntax enable "syntax highlighting
 set ttyfast "faster redrawing"
-set ttimeoutlen=0
-set number "show actual line number in current line
+set ttimeoutlen=0 "no delay when <esc> pressed
+set number "show line numbers
+set nolazyredraw "don't redraw while executing macros
+set dy+=lastline "show last line if it's too long
+" Layout
+syntax enable "syntax highlighting
+set t_Co=256
 highlight LineNr ctermfg=darkgrey
 set cursorline
 highlight CursorLine cterm=none ctermbg=234
-set nolazyredraw "don't redraw while executing macros
-set t_Co=256
+highlight Statement ctermfg=172
 "load local .vimrc files
 set exrc
 set secure
-set dy+=lastline "show last line if it's too long
 "save tmp files in external folders
 set directory=~/.vim/.swapfiles//
 set undodir=~/.vim/.undo//
-"save undos
-set undofile
+set undofile "save undos
 "goto last position when file was left
 au BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
-set ff=unix
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
@@ -82,9 +83,7 @@ let mapleader = " "
 nnoremap Q <nop>
 "Do not use for scroll. Use as tmux prefix
 nnoremap <c-f> <nop>
-inoremap jj <Esc>
 inoremap <c-s> <Esc>:w<CR>
-
 nnoremap <c-s> :w<CR>
 nnoremap <leader><cr> o<Esc>
 nnoremap <c-q> :qa<cr>
