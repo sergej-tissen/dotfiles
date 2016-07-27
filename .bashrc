@@ -92,3 +92,4 @@ fi
 # capslock as esc and ctrl
 setxkbmap -option 'caps:ctrl_modifier'
 xcape -e 'Control_L=Escape'
+alias tmux='tmux -2'
