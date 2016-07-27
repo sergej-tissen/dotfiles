@@ -87,8 +87,11 @@ nnoremap <c-s> :w<CR>
 nnoremap <leader><cr> o<Esc>
 nnoremap <c-q> :qa<cr>
 "Navigate Buffers
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
+nnoremap <Tab> :tabn<CR>
+nnoremap <S-Tab> :tabp<CR>
+let g:lasttab = 1
+nmap <Leader><Tab> :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -137,6 +140,7 @@ map N <Plug>(easymotion-prev)
 let g:airline_theme =  'bubblegum'
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
