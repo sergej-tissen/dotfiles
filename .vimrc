@@ -90,6 +90,7 @@ nnoremap <c-q> :qa<cr>
 "Navigate Buffers
 nnoremap <Tab> :tabn<CR>
 nnoremap <S-Tab> :tabp<CR>
+nnoremap <leader>o <C-i>
 let g:lasttab = 1
 nmap <Leader><Tab> :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
