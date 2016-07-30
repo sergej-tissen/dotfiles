@@ -42,6 +42,8 @@ call vundle#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
 set mouse=a "enable mouse support
 set clipboard=unnamed "copy to system clipboard
 set wildmenu "command-line completion with <tab>
@@ -69,9 +71,12 @@ highlight Statement ctermfg=172
 set exrc
 set secure
 "save tmp files in external folders
-set directory=~/.vim/.swapfiles//
 set undodir=~/.vim/.undo//
 set undofile "save undos
+" do not use swapfiles
+set nobackup
+set nowritebackup
+set noswapfile
 "goto last position when file was left
 au BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
 
