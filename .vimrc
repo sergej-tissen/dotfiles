@@ -106,7 +106,7 @@ au TabLeave * let g:lasttab = tabpagenr()
 " NERDTree
 let g:NERDTreeQuitOnOpen=1 "close NERDTree after a file is opened
 let NERDTreeShowHidden=1 "show hidden files in NERDTree
-let NERDTreeIgnore=['\.swp$', '\~$', 'node_modules']
+let NERDTreeIgnore=['\.swp$', '\~$']
 "Toggle NERDTree
 nmap <silent> <c-n> :NERDTreeToggle<cr>
 " expand to the path of the file in the current buffer
