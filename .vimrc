@@ -31,6 +31,7 @@ Plugin 'SirVer/ultisnips' "snippet Entgine
 Plugin 'honza/vim-snippets' "snippets
 Plugin 'isRuslan/vim-es6' "es6 snippets
 Plugin 'scrooloose/syntastic' "eslint
+Plugin 'tommcdo/vim-exchange' "switch two text objects
 
 call vundle#end()
 " Brief help
