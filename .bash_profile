@@ -14,6 +14,7 @@ mcd () { mkdir -p "$1" && cd "$1"; }        # mcd: Makes new Dir and jumps insid
 
 alias tmk='tmux kill-session -t'
 alias tmka='tmux kill-session -a && tmux kill-session'
+alias tma='tmux a'
 tmd () {
   folderName=${PWD##*/} 
   echo ${folderName}
