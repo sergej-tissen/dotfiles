@@ -92,7 +92,7 @@ nnoremap <c-f> <nop>
 inoremap <c-s> <Esc>:w<CR>
 nnoremap <c-s> :w<CR>
 nnoremap <leader><cr> o<Esc>
-nnoremap <c-q> :qa<cr>
+nnoremap <c-q> :q<cr>
 "Navigate Buffers
 nnoremap <leader>o <C-i>
 let g:lasttab = 1
