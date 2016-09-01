@@ -48,6 +48,7 @@ autocmd! bufwritepost .vimrc source %
 set mouse=a "enable mouse support
 set clipboard=unnamed "copy to system clipboard
 set wildmenu "command-line completion with <tab>
+set gdefault "substitue globally on lines %s/a/b/ instead %s/a/b/g
 filetype plugin indent on "indent automaticly
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab "Tab is 2 spaces
 autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
@@ -68,6 +69,9 @@ highlight LineNr ctermfg=darkgrey
 set cursorline
 highlight CursorLine cterm=none ctermbg=234
 highlight Statement ctermfg=172
+set list
+set listchars=tab:▸\ ,trail:·
+highlight SpecialKey ctermfg=234
 "load local .vimrc files
 set exrc
 set secure
