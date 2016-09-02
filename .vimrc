@@ -216,6 +216,9 @@ nnoremap <leader>lp :lprev<CR>
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+autocmd BufRead,BufNewFile *.apib set filetype=markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Local .vimrc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
