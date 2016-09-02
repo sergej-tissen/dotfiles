@@ -14,24 +14,25 @@ Plugin 'sheerun/vim-polyglot' "Language Support for many languages
 Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
 Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
 Plugin 'Xuyuanp/nerdtree-git-plugin' "git symbols in nerdtree
-Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file (leader)<c-p>
+Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: <leader> ctrl-p
 Plugin 'Valloric/YouCompleteMe' "Code completion
-Plugin 'easymotion/vim-easymotion' "faster navigation <leader>motion /
-Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. ys... cs... ds...
+Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion /
+Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
-Plugin 'tpope/vim-commentary' "comment, uncomment lines gc gcc
+Plugin 'tpope/vim-commentary' "comment, uncomment lines key: gc gcc
 Plugin 'vim-airline/vim-airline' "Statusbar
 Plugin 'vim-airline/vim-airline-themes' "Theme for airline
 Plugin 'edkolev/tmuxline.vim' "airline for tmux
 Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 Plugin 'benmills/vimux' "execute tmux command from vim
-Plugin 'mileszs/ack.vim' "search in all files
-Plugin 'SirVer/ultisnips' "snippet Entgine
+Plugin 'mileszs/ack.vim' "search in all files, key: <leader>p
+Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
 Plugin 'honza/vim-snippets' "snippets
 Plugin 'isRuslan/vim-es6' "es6 snippets
-Plugin 'scrooloose/syntastic' "eslint
-Plugin 'tommcdo/vim-exchange' "switch two text objects
+Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
+Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
+Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
 
 call vundle#end()
 " Brief help
@@ -62,6 +63,7 @@ set ttimeoutlen=0 "no delay when <esc> pressed
 set number "show line numbers
 set nolazyredraw "don't redraw while executing macros
 set dy+=lastline "show last line if it's too long
+set updatetime=250 "update vim each 250ms
 " Layout
 syntax enable "syntax highlighting
 set t_Co=256
@@ -97,11 +99,10 @@ inoremap <c-s> <Esc>:w<CR>
 nnoremap <c-s> :w<CR>
 nnoremap <leader><cr> o<Esc>
 nnoremap <c-q> :q<cr>
-"Navigate Buffers
-nnoremap <leader>o <C-i>
-let g:lasttab = 1
-nmap <Leader><Tab> :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
+"Navigate Tabs
+nnoremap <Leader><Tab> :tabnext<CR>
+nnoremap <Leader><s-Tab> :tabprevious<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -211,6 +212,10 @@ let g:syntastic_check_on_wq = 1
 
 nnoremap <leader>ll :lnext<CR>
 nnoremap <leader>lp :lprev<CR>
+
+" Gitgutter
+nmap <leader>hh <Plug>GitGutterNextHunk
+nmap <leader>hk <Plug>GitGutterPrevHunk
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
