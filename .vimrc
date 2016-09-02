@@ -71,7 +71,7 @@ highlight CursorLine cterm=none ctermbg=234
 highlight Statement ctermfg=172
 set list
 set listchars=tab:▸\ ,trail:·
-highlight SpecialKey ctermfg=234
+highlight SpecialKey ctermfg=239
 "load local .vimrc files
 set exrc
 set secure
