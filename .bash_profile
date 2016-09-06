@@ -23,7 +23,6 @@ tmd () {
   tmux new-window -t "${folderName}:2" -n "etc"
   tmux select-window -t "${folderName}:1"
   tmux split-window -h -p 45
-  tmux split-window -v -p 50
   tmux select-pane -t 1
   tmux send-keys 'vim' Enter
   tmux -2 attach-session -t "${folderName}"
