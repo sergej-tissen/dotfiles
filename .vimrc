@@ -14,7 +14,7 @@ Plugin 'sheerun/vim-polyglot' "Language Support for many languages
 Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
 Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
 Plugin 'Xuyuanp/nerdtree-git-plugin' "git symbols in nerdtree
-Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: <leader> ctrl-p
+Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p
 Plugin 'Valloric/YouCompleteMe' "Code completion
 Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion /
 Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds
@@ -26,7 +26,7 @@ Plugin 'edkolev/tmuxline.vim' "airline for tmux
 Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 Plugin 'benmills/vimux' "execute tmux command from vim
-Plugin 'mileszs/ack.vim' "search in all files, key: <leader>p
+Plugin 'mileszs/ack.vim' "search in all files, key: <leader>a
 Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
 Plugin 'honza/vim-snippets' "snippets
 Plugin 'isRuslan/vim-es6' "es6 snippets
@@ -119,7 +119,7 @@ nmap <silent> <leader><c-n> :NERDTreeFind<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " CtrlP
-nmap <silent> <leader><c-p> :CtrlPBuffer<cr>
+nmap <silent> <leader>p :CtrlPBuffer<cr>
 let g:ctrlp_dotfiles=1
 let g:ctrlp_working_path_mode = 'ra'
 " CtrlP ignore patterns
@@ -196,7 +196,7 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep --hidden --ignore-dir .git'
 endif
 cnoreabbrev Ack Ack!
-nnoremap <Leader>p :Ack!<Space>
+nnoremap <Leader>a :Ack!<Space>
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<C-c>"
