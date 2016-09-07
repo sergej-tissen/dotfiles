@@ -99,9 +99,10 @@ inoremap <c-s> <Esc>:w<CR>
 nnoremap <c-s> :w<CR>
 nnoremap <leader><cr> o<Esc>
 nnoremap <c-q> :q<cr>
-"Navigate Tabs
-nnoremap <Leader><Tab> :tabnext<CR>
-nnoremap <Leader><s-Tab> :tabprevious<CR>
+" Navigate Buffers
+nnoremap <leader>q :bd<cr>
+nnoremap <Leader><Tab> :bprevious<CR>
+nnoremap <Leader><s-Tab> :bnext<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin settings
@@ -131,6 +132,8 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 2
+" search only filename, not the path
+let g:ctrlp_by_filename = 1
 
 " YCM
 nnoremap <silent><leader>ref :YcmCompleter GoTo<CR>
