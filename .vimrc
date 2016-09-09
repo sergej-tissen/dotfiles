@@ -33,6 +33,7 @@ Plugin 'isRuslan/vim-es6' "es6 snippets
 Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
 Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
+Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: InA, a|, iN'
 
 call vundle#end()
 " Brief help
