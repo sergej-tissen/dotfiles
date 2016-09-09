@@ -35,6 +35,7 @@ Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: InA, a|, iN'
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
+Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: gw
 
 call vundle#end()
 " Brief help
@@ -225,6 +226,9 @@ nnoremap <leader>lp :lprev<CR>
 " Gitgutter
 nmap <leader>hh <Plug>GitGutterNextHunk
 nmap <leader>hk <Plug>GitGutterPrevHunk
+
+" Argwrap
+nnoremap <silent> gw :ArgWrap<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
