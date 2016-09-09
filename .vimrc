@@ -105,6 +105,10 @@ nnoremap <c-q> :q<cr>
 nnoremap <leader>q :bd<cr>
 nnoremap <Leader><Tab> :bprevious<CR>
 nnoremap <Leader><s-Tab> :bnext<CR>
+" Y behaves like C and D
+noremap Y y$
+" goto end of line in insert mode
+inoremap <C-e> <C-o>$
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin settings
