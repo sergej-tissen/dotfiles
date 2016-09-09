@@ -34,6 +34,7 @@ Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
 Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: InA, a|, iN'
+Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
 
 call vundle#end()
 " Brief help
