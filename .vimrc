@@ -69,12 +69,12 @@ set dy+=lastline "show last line if it's too long
 set updatetime=250 "update vim each 250ms
 " Layout
 syntax enable "syntax highlighting
-set t_Co=256
+set t_Co=256 " 256 colors instead 16
 highlight LineNr ctermfg=darkgrey
-set cursorline
+set cursorline "highlight line of cursor
 highlight CursorLine cterm=none ctermbg=234
 highlight Statement ctermfg=172
-set list
+set list "show tab and trailing space symbols
 set listchars=tab:▸\ ,trail:·
 highlight SpecialKey ctermfg=239
 "load local .vimrc files
@@ -127,8 +127,9 @@ nmap <silent> <leader><c-n> :NERDTreeFind<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " CtrlP
+" show only files that are in the buffer
 nmap <silent> <leader>p :CtrlPBuffer<cr>
-let g:ctrlp_dotfiles=1
+let g:ctrlp_show_hidden=1
 let g:ctrlp_working_path_mode = 'ra'
 " CtrlP ignore patterns
 let g:ctrlp_custom_ignore = {
@@ -158,7 +159,7 @@ map n <Plug>(easymotion-next)
 map N <Plug>(easymotion-prev)
 
 " Airline
-let g:airline_theme =  'bubblegum'
+let g:airline_theme = 'bubblegum'
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
