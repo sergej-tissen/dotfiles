@@ -243,8 +243,11 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "let g:syntastic_javascript_checkers = ['eslint'] "run eslint
+"set path=**
+"set suffixesadd=.js,.html,.css,.json
 "map <leader>rs :wa <bar> :call VimuxRunCommand('clear && npm start')<cr>
 "map <leader>rt :wa <bar> :call VimuxRunCommand('clear && npm test')<cr>
 "map <leader>rw :wa <bar> :call VimuxRunCommand('clear && npm run watch')<cr>
 "map <leader>rb :wa <bar> :call VimuxRunCommand('clear && npm run build')<cr>
 "map <leader>rr :w <bar> :call VimuxRunCommand('clear && node ' .  bufname('%'))<cr>
+
