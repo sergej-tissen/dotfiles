@@ -10,6 +10,7 @@ alias ...='cd ../../'                       # Go back 2 directory levels
 alias c='clear'                             # c: Clear terminal display
 alias ag='ag --hidden'                      # include dotfiles
 alias vi='vim'
+alias iv='vim'
 cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd: Makes new Dir and jumps inside
 
@@ -18,8 +19,8 @@ alias tmka='tmux kill-session -a && tmux kill-session && tmux ls'
 alias tma='tmux a'
 alias tml='tmux ls'
 tmd () {
-  folderName=${PWD##*/} 
-  tmux new -s "${folderName}" -n dev -d 
+  folderName=${PWD##*/}
+  tmux new -s "${folderName}" -n dev -d
   tmux new-window -t "${folderName}:2" -n "etc"
   tmux select-window -t "${folderName}:1"
   tmux split-window -h -p 45

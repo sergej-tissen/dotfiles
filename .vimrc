@@ -49,8 +49,6 @@ call vundle#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Automatic reloading of .vimrc
-autocmd! bufwritepost .vimrc source %
 set mouse=a "enable mouse support
 if &term =~ '^screen'
     " tmux knows the extended mouse mode
@@ -85,26 +83,26 @@ highlight Statement ctermfg=172
 set list "show tab and trailing space symbols
 set listchars=tab:▸\ ,trail:·
 highlight SpecialKey ctermfg=239
-"load local .vimrc files
+" load local .vimrc files
 set exrc
 set secure
-"save tmp files in external folders
+" save tmp files in external folders
 set undodir=~/.vim/.undo//
 set undofile "save undos
 " do not use swapfiles
 set nobackup
 set nowritebackup
 set noswapfile
-"goto last position when file was left
-au BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
+" 5 rows offset when scrolling
+set scrolloff=5
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = " "
-"Do not enter  Ex Mode
+" Do not enter  Ex Mode
 nnoremap Q <nop>
-"Do not use for scroll. Use as tmux prefix
+" Do not use for scroll. Use as tmux prefix
 nnoremap <c-f> <nop>
 inoremap <c-s> <Esc>:w<CR>
 nnoremap <c-s> :w<CR>
@@ -127,7 +125,7 @@ inoremap <C-e> <C-o>$
 let g:NERDTreeQuitOnOpen=1 "close NERDTree after a file is opened
 let NERDTreeShowHidden=1 "show hidden files in NERDTree
 let NERDTreeIgnore=['\.swp$', '\~$']
-"Toggle NERDTree
+" Toggle NERDTree
 nmap <silent> <c-n> :NERDTreeToggle<cr>
 " expand to the path of the file in the current buffer
 nmap <silent> <leader><c-n> :NERDTreeFind<cr>
@@ -243,8 +241,17 @@ nnoremap <silent> <leader>gw :ArgWrap<CR>
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
+
 autocmd BufRead,BufNewFile *.apib set filetype=markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+" Load manpages with :Man
+runtime! ftplugin/man.vim
+
+" goto last position when file was left
+autocmd  BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Local .vimrc
