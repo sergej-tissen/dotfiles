@@ -36,6 +36,7 @@ Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <lead
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: InA, a|, iN'
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
+Plugin 'tmhedberg/matchit' " % for tags
 
 call vundle#end()
 " Brief help
@@ -50,6 +51,10 @@ call vundle#end()
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 set mouse=a "enable mouse support
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 set clipboard=unnamed "copy to system clipboard
 set wildmenu "command-line completion with <tab>
 set gdefault "substitue globally on lines %s/a/b/ instead %s/a/b/g
