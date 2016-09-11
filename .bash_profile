@@ -19,7 +19,6 @@ alias tma='tmux a'
 alias tml='tmux ls'
 tmd () {
   folderName=${PWD##*/} 
-  echo ${folderName}
   tmux new -s "${folderName}" -n dev -d 
   tmux new-window -t "${folderName}:2" -n "etc"
   tmux select-window -t "${folderName}:1"
@@ -45,10 +44,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 if [ "$(uname)" == "Darwin" ]; then
 
-  # Do something under Mac OS X platform        
-  trash () { command mv "$@" ~/.Trash ; }     # trash: Moves a file to the MacOS trash
-  alias atom='open -a Atom'		    # atom: Opens Atom Editor
-  alias f='open -a Finder ./' # f: Opens current directory in MacOS Finder
+  # Do something under Mac OS X platform
   export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
