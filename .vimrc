@@ -37,6 +37,7 @@ Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separat
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'tmhedberg/matchit' " % for tags
+Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
 
 call vundle#end()
 " Brief help
