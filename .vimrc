@@ -67,6 +67,8 @@ set number "show line numbers
 set nolazyredraw "don't redraw while executing macros
 set dy+=lastline "show last line if it's too long
 set updatetime=250 "update vim each 250ms
+" Don't add the comment prefix when I hit enter or o/O on a comment line.
+autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 " Layout
 syntax enable "syntax highlighting
 set t_Co=256 " 256 colors instead 16
