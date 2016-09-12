@@ -5,6 +5,8 @@ alias ls='ls -GFh'
 alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
+alias cdd='cd ~/dotfiles'
+alias cdw='cd ~/workspace'
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
 alias c='clear'                             # c: Clear terminal display
@@ -20,13 +22,17 @@ alias tma='tmux a'
 alias tml='tmux ls'
 tmd () {
   folderName=${PWD##*/}
-  tmux new -s "${folderName}" -n dev -d
-  tmux new-window -t "${folderName}:2" -n "etc"
-  tmux select-window -t "${folderName}:1"
-  tmux split-window -h -p 45
-  tmux select-pane -t 1
-  tmux send-keys 'vim' Enter
-  tmux -2 attach-session -t "${folderName}"
+  if (tmux has-session -t "${folderName}"); then
+    tmux attach -t "${folderName}"
+  else
+    tmux new -s "${folderName}" -n dev -d
+    tmux new-window -t "${folderName}:2" -n "etc"
+    tmux select-window -t "${folderName}:1"
+    tmux split-window -h -p 45
+    tmux select-pane -t 1
+    tmux send-keys 'vim' Enter
+    tmux -2 attach-session -t "${folderName}"
+  fi
 }
 
 bind -r '\C-s'
