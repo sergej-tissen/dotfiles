@@ -50,16 +50,16 @@ call vundle#end()
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a "enable mouse support
+" resize splits with mouse
 if &term =~ '^screen'
-    " tmux knows the extended mouse mode
-    set ttymouse=xterm2
+  " tmux knows the extended mouse mode
+  set ttymouse=xterm2
 endif
 set clipboard=unnamed "copy to system clipboard
 set wildmenu "command-line completion with <tab>
 set gdefault "substitue globally on lines %s/a/b/ instead %s/a/b/g
 filetype plugin indent on "indent automaticly
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab "Tab is 2 spaces
-autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
 set autoread "reload file when changed externally
 set backspace=indent,eol,start "sane backspace
 set magic "regex
@@ -104,6 +104,8 @@ let mapleader = " "
 nnoremap Q <nop>
 " Do not use for scroll. Use as tmux prefix
 nnoremap <c-f> <nop>
+map j gj
+map k gk
 inoremap <c-s> <Esc>:w<CR>
 nnoremap <c-s> :w<CR>
 nnoremap <leader><cr> o<Esc>
@@ -139,9 +141,9 @@ let g:ctrlp_show_hidden=1
 let g:ctrlp_working_path_mode = 'ra'
 " CtrlP ignore patterns
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
-  \ 'file': '\.exe$\|\.so$|\.swp$'
-  \ }
+      \ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
+      \ 'file': '\.exe$\|\.so$|\.swp$'
+      \ }
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " search the nearest ancestor that contains .git, .hg, .svn
@@ -231,8 +233,8 @@ nnoremap <leader>ll :lnext<CR>
 nnoremap <leader>lp :lprev<CR>
 
 " Gitgutter
-      nmap <leader>hh <Plug>GitGutterNextHunk
-      nmap <leader>hk <Plug>GitGutterPrevHunk
+nmap <leader>hh <Plug>GitGutterNextHunk
+nmap <leader>hk <Plug>GitGutterPrevHunk
 
 " Argwrap
 nnoremap <silent> <leader>gw :ArgWrap<CR>
@@ -241,17 +243,18 @@ nnoremap <silent> <leader>gw :ArgWrap<CR>
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Automatic reloading of .vimrc
-autocmd! bufwritepost .vimrc source %
-
 autocmd BufRead,BufNewFile *.apib set filetype=markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
 
 " Load manpages with :Man
 runtime! ftplugin/man.vim
 
 " goto last position when file was left
 autocmd  BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
+
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Local .vimrc
