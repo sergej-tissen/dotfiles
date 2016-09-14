@@ -38,7 +38,7 @@ Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in r
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
-Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer
+Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>m
 
 call vundle#end()
 " Brief help
@@ -72,8 +72,6 @@ set number "show line numbers
 set nolazyredraw "don't redraw while executing macros
 set dy+=lastline "show last line if it's too long
 set updatetime=250 "update vim each 250ms
-" Don't add the comment prefix when I hit enter or o/O on a comment line.
-autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 " Layout
 syntax enable "syntax highlighting
 set t_Co=256 " 256 colors instead 16
@@ -245,6 +243,9 @@ nmap <leader>hk <Plug>GitGutterPrevHunk
 " Argwrap
 nnoremap <silent> <leader>gw :ArgWrap<CR>
 
+" EnMasse
+nnoremap <leader>m :EnMasse<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -261,6 +262,9 @@ autocmd  BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe '
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
+
+" Don't add the comment prefix when I hit enter or o/O on a comment line.
+autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Local .vimrc
