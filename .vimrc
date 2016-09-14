@@ -38,6 +38,7 @@ Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in r
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
+Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer
 
 call vundle#end()
 " Brief help
