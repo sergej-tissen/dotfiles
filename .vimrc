@@ -220,7 +220,7 @@ endif
 cnoreabbrev Ack Ack!
 nnoremap <Leader>aa :Ack!<Space>
 nnoremap <Leader>aw :Ack!<Space><C-R><C-W><CR>
-vnoremap <Leader>av y:Ack!<Space><C-R>"<CR>
+vnoremap <Leader>av y:Ack!<Space>"<C-R>""<CR>
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<C-c>"
