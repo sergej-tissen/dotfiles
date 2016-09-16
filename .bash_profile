@@ -43,9 +43,11 @@ tmdd () {
     tmux new -s "${folderName}" -n dev -d
     tmux new-window -t "${folderName}:2" -n "etc"
     tmux new-window -t "${folderName}:3" -n "live-reload"
-    tmux send-keys 'firefox' Enter
-    tmux split-window -h
-    tmux send-keys 'npm run live-reload' Enter
+    if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+      tmux send-keys 'firefox' Enter
+      tmux split-window -h
+      tmux send-keys 'npm run live-reload' Enter
+    fi
     tmux select-window -t "${folderName}:2"
     tmux select-window -t "${folderName}:1"
     tmux split-window -v -p 30
@@ -76,11 +78,9 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 if [ "$(uname)" == "Darwin" ]; then
-
   # Do something under Mac OS X platform
   export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-
   # Do something under GNU/Linux platform
   if [ -f ~/.bashrc ]; then
     source ~/.bashrc
