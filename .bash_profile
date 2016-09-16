@@ -46,11 +46,14 @@ tmdd () {
     tmux send-keys 'firefox' Enter
     tmux split-window -h
     tmux send-keys 'npm run live-reload' Enter
+    tmux select-window -t "${folderName}:2"
     tmux select-window -t "${folderName}:1"
     tmux split-window -v -p 30
+    tmux split-window -h -p 60
     tmux send-keys 'npm run watch:test:unit' Enter
-    tmux split-window -h
+    tmux split-window -h -p 33
     tmux send-keys 'npm start' Enter
+    tmux select-pane -t 2
     tmux select-pane -t 1
     tmux send-keys 'vim' Enter
     tmux send-keys ':vsp' Enter
