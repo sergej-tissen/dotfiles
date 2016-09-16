@@ -52,7 +52,7 @@ tmdd () {
     tmux send-keys 'npm run live-reload' Enter
     tmux select-window -t "${folderName}:2"
     tmux select-window -t "${folderName}:1"
-    tmux split-window -v -p 30
+    tmux split-window -v -p 25
     tmux split-window -h -p 60
     tmux send-keys 'npm run watch:test:unit' Enter
     tmux split-window -h -p 33
