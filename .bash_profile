@@ -43,7 +43,11 @@ tmdd () {
     tmux new -s "${folderName}" -n dev -d
     tmux new-window -t "${folderName}:2" -n "etc"
     tmux new-window -t "${folderName}:3" -n "live-reload"
-    tmux send-keys 'firefox' Enter
+    if [ "$(uname)" == "Darwin" ]; then
+      tmux send-keys 'open /Applications/Firefox.app/' Enter
+    elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+      tmux send-keys 'firefox' Enter
+    fi
     tmux split-window -h
     tmux send-keys 'npm run live-reload' Enter
     tmux select-window -t "${folderName}:2"
