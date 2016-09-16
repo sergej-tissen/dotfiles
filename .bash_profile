@@ -35,6 +35,29 @@ tmd () {
   fi
 }
 
+tmdd () {
+  folderName=${PWD##*/}
+  if (tmux has-session -t "${folderName}"); then
+    tmux attach -t "${folderName}"
+  else
+    tmux new -s "${folderName}" -n dev -d
+    tmux new-window -t "${folderName}:2" -n "etc"
+    tmux new-window -t "${folderName}:3" -n "live-reload"
+    tmux send-keys 'firefox' Enter
+    tmux split-window -h
+    tmux send-keys 'npm run live-reload' Enter
+    tmux select-window -t "${folderName}:1"
+    tmux split-window -v -p 30
+    tmux send-keys 'npm run watch:test:unit' Enter
+    tmux split-window -h
+    tmux send-keys 'npm start' Enter
+    tmux select-pane -t 1
+    tmux send-keys 'vim' Enter
+    tmux send-keys ':vsp' Enter
+    tmux -2 attach-session -t "${folderName}"
+    :vsp
+  fi
+}
 bind -r '\C-s'
 stty -ixon
 
