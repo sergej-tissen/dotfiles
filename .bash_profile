@@ -43,11 +43,9 @@ tmdd () {
     tmux new -s "${folderName}" -n dev -d
     tmux new-window -t "${folderName}:2" -n "etc"
     tmux new-window -t "${folderName}:3" -n "live-reload"
-    if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-      tmux send-keys 'firefox' Enter
-      tmux split-window -h
-      tmux send-keys 'npm run live-reload' Enter
-    fi
+    tmux send-keys 'firefox' Enter
+    tmux split-window -h
+    tmux send-keys 'npm run live-reload' Enter
     tmux select-window -t "${folderName}:2"
     tmux select-window -t "${folderName}:1"
     tmux split-window -v -p 30
