@@ -13,7 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'sheerun/vim-polyglot' "Language Support for many languages
 Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
 Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
-Plugin 'Xuyuanp/nerdtree-git-plugin' "git symbols in nerdtree
 Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p
 Plugin 'Valloric/YouCompleteMe' "Code completion
 Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion /
