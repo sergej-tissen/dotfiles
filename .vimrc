@@ -120,6 +120,26 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Autocommands
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+autocmd BufRead,BufNewFile *.apib set filetype=markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
+
+" Load manpages with :Man
+runtime! ftplugin/man.vim
+
+" goto last position when file was left
+autocmd  BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
+
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
+
+" Don't add the comment prefix when I hit enter or o/O on a comment line.
+autocmd FileType * setlocal formatoptions-=r formatoptions-=o
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -157,10 +177,10 @@ nnoremap <leader>ren :YcmCompleter RefactorRename<Space>
 set completeopt-=preview
 
 " Easymotion
+let g:EasyMotion_smartcase = 1
 map <Leader> <Plug>(easymotion-prefix)
 nmap <leader>s <Plug>(easymotion-s2)
 omap <leader>s <Plug>(easymotion-s2)
-let g:EasyMotion_smartcase = 1
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map n <Plug>(easymotion-next)
@@ -230,7 +250,6 @@ let g:syntastic_loc_list_height = 5
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
-
 nnoremap <leader>ll :lnext<CR>
 nnoremap <leader>lp :lprev<CR>
 
@@ -242,35 +261,17 @@ nmap <leader>hk <Plug>GitGutterPrevHunk
 nnoremap <leader>m :EnMasse<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-autocmd BufRead,BufNewFile *.apib set filetype=markdown
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
-
-" Load manpages with :Man
-runtime! ftplugin/man.vim
-
-" goto last position when file was left
-autocmd  BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
-
-" Automatic reloading of .vimrc
-autocmd! bufwritepost .vimrc source %
-
-" Don't add the comment prefix when I hit enter or o/O on a comment line.
-autocmd FileType * setlocal formatoptions-=r formatoptions-=o
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Local .vimrc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"let g:syntastic_javascript_checkers = ['eslint'] "run eslint
-"set path=**
-"set suffixesadd=.js,.html,.css,.json,.md,.apib
-"map <leader>rs :wa <bar> :call VimuxRunCommand('clear && npm start')<cr>
-"map <leader>rt :wa <bar> :call VimuxRunCommand('clear && npm test')<cr>
-"map <leader>rw :wa <bar> :call VimuxRunCommand('clear && npm run watch')<cr>
-"map <leader>rb :wa <bar> :call VimuxRunCommand('clear && npm run build')<cr>
-"map <leader>rr :w <bar> :call VimuxRunCommand('clear && node ' .  bufname('%'))<cr>
-
+" let g:syntastic_javascript_checkers = ['eslint'] "run eslint
+" map <leader>rs :wa <bar> :call VimuxRunCommand('clear && npm start')<cr>
+" map <leader>rt :wa <bar> :call VimuxRunCommand('clear && npm test')<cr>
+" map <leader>rl :wa <bar> :call VimuxRunCommand('clear && npm run lint')<cr>
+" map <leader>ru :wa <bar> :call VimuxRunCommand('clear && npm run test:unit')<cr>
+" map <leader>rwu :wa <bar> :call VimuxRunCommand('clear && npm run watch:test:unit')<cr>
+" map <leader>rw :wa <bar> :call VimuxRunCommand('clear && npm run watch')<cr>
+" map <leader>rb :wa <bar> :call VimuxRunCommand('clear && npm run build')<cr>
+" map <leader>rr :w <bar> :call VimuxRunCommand('clear && node ' .  bufname('%'))<cr>
+" set path=**
+" set suffixesadd=.js,.html,.css,.json,.md,.apib
