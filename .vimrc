@@ -35,7 +35,6 @@ Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: InA, a|, iN'
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
-Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
 Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>m
@@ -239,9 +238,6 @@ nnoremap <leader>lp :lprev<CR>
 " Gitgutter
 nmap <leader>hh <Plug>GitGutterNextHunk
 nmap <leader>hk <Plug>GitGutterPrevHunk
-
-" Argwrap
-nnoremap <silent> <leader>gw :ArgWrap<CR>
 
 " EnMasse
 nnoremap <leader>m :EnMasse<CR>
