@@ -1,0 +1,12 @@
+" run in node-project: ln -s ~/dotfiles/.vimrc_local .vimrc
+let g:syntastic_javascript_checkers = ['eslint'] "run eslint
+map <leader>ras :wa <bar> :call VimuxRunCommand('clear && npm start')<cr>
+map <leader>rab :wa <bar> :call VimuxRunCommand('clear && npm run build')<cr>
+map <leader>rtt :wa <bar> :call VimuxRunCommand('clear && npm test')<cr>
+map <leader>rtl :wa <bar> :call VimuxRunCommand('clear && npm run lint')<cr>
+map <leader>rtu :wa <bar> :call VimuxRunCommand('clear && npm run test:unit')<cr>
+map <leader>rww :wa <bar> :call VimuxRunCommand('clear && npm run watch')<cr>
+map <leader>rwu :wa <bar> :call VimuxRunCommand('clear && npm run watch:test:unit')<cr>
+map <leader>rr :w <bar> :call VimuxRunCommand('clear && node ' .  bufname('%'))<cr>
+set path=**
+set suffixesadd=.js,.html,.css,.json,.md,.apib

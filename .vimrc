@@ -259,19 +259,3 @@ nmap <leader>hk <Plug>GitGutterPrevHunk
 
 " EnMasse
 nnoremap <leader>m :EnMasse<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Local .vimrc
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" let g:syntastic_javascript_checkers = ['eslint'] "run eslint
-" map <leader>rs :wa <bar> :call VimuxRunCommand('clear && npm start')<cr>
-" map <leader>rt :wa <bar> :call VimuxRunCommand('clear && npm test')<cr>
-" map <leader>rl :wa <bar> :call VimuxRunCommand('clear && npm run lint')<cr>
-" map <leader>ru :wa <bar> :call VimuxRunCommand('clear && npm run test:unit')<cr>
-" map <leader>rwu :wa <bar> :call VimuxRunCommand('clear && npm run watch:test:unit')<cr>
-" map <leader>rw :wa <bar> :call VimuxRunCommand('clear && npm run watch')<cr>
-" map <leader>rb :wa <bar> :call VimuxRunCommand('clear && npm run build')<cr>
-" map <leader>rr :w <bar> :call VimuxRunCommand('clear && node ' .  bufname('%'))<cr>
-" set path=**
-" set suffixesadd=.js,.html,.css,.json,.md,.apib
