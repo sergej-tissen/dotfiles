@@ -38,6 +38,7 @@ Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
 Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>m
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
+Plugin 'mtscout6/syntastic-local-eslint.vim' "Use project specific eslint
 
 call vundle#end()
 " Brief help
