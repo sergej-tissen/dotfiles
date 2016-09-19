@@ -25,7 +25,7 @@ Plugin 'edkolev/tmuxline.vim' "airline for tmux
 Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 Plugin 'benmills/vimux' "execute tmux command from vim
-Plugin 'mileszs/ack.vim' "search in all files, key: <leader>a
+Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av
 Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
 Plugin 'honza/vim-snippets' "snippets
 Plugin 'isRuslan/vim-es6' "es6 snippets
