@@ -23,7 +23,7 @@ alias tml='tmux ls'
 tmd () {
   folderName=${PWD##*/}
   if (tmux has-session -t "${folderName}"); then
-    tmux attach -t "${folderName}"
+    tmux -2 attach -t "${folderName}"
   else
     tmux new -s "${folderName}" -n dev -d
     tmux new-window -t "${folderName}:2" -n "etc"
@@ -38,7 +38,7 @@ tmd () {
 tmdd () {
   folderName=${PWD##*/}
   if (tmux has-session -t "${folderName}"); then
-    tmux attach -t "${folderName}"
+    tmux -2 attach -t "${folderName}"
   else
     tmux new -s "${folderName}" -n dev -d
     tmux new-window -t "${folderName}:2" -n "etc"
