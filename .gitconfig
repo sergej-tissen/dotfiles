@@ -22,6 +22,7 @@
   sh = show --histogram --word-diff
   aa = !git add . && git status
   au = !git add -u . && git status
+  sd = !git s && git df
   st  = stash --include-untracked
   sp = stash pop
   mf = merge --ff-only
