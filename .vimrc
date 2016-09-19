@@ -37,6 +37,7 @@ Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in r
 Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
 Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>m
+Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 
 call vundle#end()
 " Brief help
@@ -261,3 +262,6 @@ nmap <leader>hk <Plug>GitGutterPrevHunk
 
 " EnMasse
 nnoremap <leader>m :EnMasse<CR>
+
+" Argwrap
+nnoremap <silent> <leader>gw :ArgWrap<CR>
