@@ -64,11 +64,13 @@ set backspace=indent,eol,start "sane backspace
 set magic "regex
 set ff=unix
 set encoding=utf8
+set fixendofline "add <EOL> to each file
 set ttyfast "faster redrawing"
 set ttimeoutlen=0 "no delay when <esc> pressed
 set number "show line numbers
 set nolazyredraw "don't redraw while executing macros
 set dy+=lastline "show last line if it's too long
+set breakindent "wrap line according to indent
 set updatetime=250 "update vim each 250ms
 " Layout
 syntax enable "syntax highlighting
