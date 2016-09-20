@@ -39,6 +39,7 @@ Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
 Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>m
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'mtscout6/syntastic-local-eslint.vim' "Use project specific eslint
+Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
 
 call vundle#end()
 " Brief help
@@ -266,3 +267,12 @@ nnoremap <leader>m :EnMasse<CR>
 
 " Argwrap
 nnoremap <silent> <leader>gw :ArgWrap<CR>
+
+" Hardtime
+let g:hardtime_default_on = 1
+let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:hardtime_timeout = 2000
+let g:hardtime_showmsg = 1
+let g:hardtime_ignore_quickfix = 1
+let g:hardtime_allow_different_key = 1
+nnoremap <Leader>x :HardTimeToggle<CR>
