@@ -10,36 +10,36 @@ call vundle#begin()
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'sheerun/vim-polyglot' "Language Support for many languages
-Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
-Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
-Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p
-Plugin 'Valloric/YouCompleteMe' "Code completion
-Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion /
-Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds
-Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
-Plugin 'tpope/vim-commentary' "comment, uncomment lines key: gc gcc
-Plugin 'vim-airline/vim-airline' "Statusbar
-Plugin 'vim-airline/vim-airline-themes' "Theme for airline
-Plugin 'edkolev/tmuxline.vim' "airline for tmux
-Plugin 'tpope/vim-fugitive' "Git support
-Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
+Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
 Plugin 'benmills/vimux' "execute tmux command from vim
-Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av
-Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
+Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
+Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p
+Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion /
+Plugin 'edkolev/tmuxline.vim' "airline for tmux
+Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'honza/vim-snippets' "snippets
 Plugin 'isRuslan/vim-es6' "es6 snippets
-Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
-Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
-Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
-Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: Ina, a|, in'
-Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
-Plugin 'tmhedberg/matchit' " % for tags
-Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
-Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>m
-Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
+Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
+Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av
 Plugin 'mtscout6/syntastic-local-eslint.vim' "Use project specific eslint
+Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>m
+Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
+Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
+Plugin 'sheerun/vim-polyglot' "Language Support for many languages
+Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
 Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
+Plugin 'tmhedberg/matchit' " % for tags
+Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
+Plugin 'tpope/vim-commentary' "comment, uncomment lines key: gc gcc
+Plugin 'tpope/vim-fugitive' "Git support
+Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
+Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds
+Plugin 'Valloric/YouCompleteMe' "Code completion
+Plugin 'vim-airline/vim-airline' "Statusbar
+Plugin 'vim-airline/vim-airline-themes' "Theme for airline
+Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
+Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
+Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: Ina, a|, in'
 
 call vundle#end()
 " Brief help
