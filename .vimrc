@@ -40,6 +40,7 @@ Plugin 'vim-airline/vim-airline-themes' "Theme for airline
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
 Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: Ina, a|, in'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 " Brief help
@@ -75,16 +76,6 @@ set nolazyredraw "don't redraw while executing macros
 set dy+=lastline "show last line if it's too long
 set breakindent "wrap line according to indent
 set updatetime=250 "update vim each 250ms
-" Layout
-syntax enable "syntax highlighting
-set t_Co=256 " 256 colors instead 16
-highlight LineNr ctermfg=darkgrey
-set cursorline "highlight line of cursor
-highlight CursorLine cterm=none ctermbg=234
-highlight Statement ctermfg=172
-set list "show tab and trailing space symbols
-set listchars=tab:▸\ ,trail:·
-highlight SpecialKey ctermfg=239
 " load local .vimrc files
 set exrc
 set secure
@@ -97,6 +88,15 @@ set nowritebackup
 set noswapfile
 " 5 rows offset when scrolling
 set scrolloff=5
+
+" Layout
+syntax enable
+set t_Co=16 " 16 colors
+set background=dark
+colorscheme solarized
+set cursorline
+set list "show tab and trailing space symbols
+set listchars=tab:▸\ ,trail:·
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings

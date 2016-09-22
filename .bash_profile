@@ -20,6 +20,7 @@ alias tmk='tmux kill-session -t ${PWD##*/} && tmux ls'
 alias tmka='tmux kill-session -a && tmux kill-session && tmux ls'
 alias tma='tmux a'
 alias tml='tmux ls'
+alias tmux="TERM=screen-256color-bce tmux -2"
 tmd () {
   folderName=${PWD##*/}
   if (tmux has-session -t "${folderName}"); then
