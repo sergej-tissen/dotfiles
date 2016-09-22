@@ -3,6 +3,8 @@ set completion-ignore-case On
 # up and down must match
 "\e[B": history-search-forward
 "\e[A": history-search-backward
+"\C-n": history-search-forward
+"\C-p": history-search-backward
 # List all matches in case multiple possible completions are possible
 set show-all-if-ambiguous on
 # Flip through autocompletion matches with Shift-Tab.
