@@ -11,6 +11,7 @@ call vundle#begin()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
+Plugin 'altercation/vim-colors-solarized' "solarized Theme
 Plugin 'benmills/vimux' "execute tmux command from vim
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p
@@ -28,6 +29,7 @@ Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
 Plugin 'sheerun/vim-polyglot' "Language Support for many languages
 Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
 Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
+Plugin 'terryma/vim-multiple-cursors' "multiple cursors. key: C-m C-x C-p
 Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 Plugin 'tpope/vim-commentary' "comment, uncomment lines key: gc gcc
@@ -40,7 +42,6 @@ Plugin 'vim-airline/vim-airline-themes' "Theme for airline
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
 Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: Ina, a|, in'
-Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 " Brief help
@@ -88,15 +89,6 @@ set nowritebackup
 set noswapfile
 " 5 rows offset when scrolling
 set scrolloff=5
-
-" Layout
-syntax enable
-set t_Co=16 " 16 colors
-set background=dark
-colorscheme solarized
-set cursorline
-set list "show tab and trailing space symbols
-set listchars=tab:▸\ ,trail:·
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
@@ -276,3 +268,15 @@ let g:hardtime_showmsg = 1
 let g:hardtime_ignore_quickfix = 1
 let g:hardtime_allow_different_key = 1
 nnoremap <Leader>x :HardTimeToggle<CR>
+
+" Sorarized
+syntax enable
+set t_Co=16 " 16 colors
+set background=dark
+colorscheme solarized
+set cursorline
+set list "show tab and trailing space symbols
+set listchars=tab:▸\ ,trail:·
+
+" Multiple Cursors
+let g:multi_cursor_next_key='<C-m>'
