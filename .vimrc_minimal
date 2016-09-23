@@ -1,3 +1,18 @@
-set path=** suffixesadd=.js,.html,.css,.json nocompatible wildmode=full wildmenu number
+set path=**
+set suffixesadd=.js,.html,.css,.json
+set nocompatible
+set wildmode=full
+set wildmenu
+set number
+set relativenumber
+set nobackup
+set nowritebackup
+set noswapfile
+set ignorecase
+set smartcase
+set incsearch
+
 syntax on
 filetype plugin on
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc_minimal source %
