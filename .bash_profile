@@ -13,6 +13,7 @@ alias c='clear'                             # c: Clear terminal display
 alias ag='ag --hidden'                      # include dotfiles
 alias vi='vim'
 alias iv='vim'
+alias vimmin='vim -u ~/.vimrc_minimal'
 cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd: Makes new Dir and jumps inside
 
