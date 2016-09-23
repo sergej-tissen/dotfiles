@@ -60,6 +60,7 @@ if &term =~ '^screen'
   set ttymouse=xterm2
 endif
 set clipboard=unnamed "copy to system clipboard
+nnoremap p p=`]
 set wildmenu "command-line completion with <tab>
 set gdefault "substitue globally on lines %s/a/b/ instead %s/a/b/g
 filetype plugin indent on "indent automaticly
