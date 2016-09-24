@@ -11,6 +11,7 @@ set noswapfile
 set ignorecase
 set smartcase
 set incsearch
+set nrformats=
 
 syntax on
 filetype plugin on
