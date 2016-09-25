@@ -44,6 +44,7 @@ Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: Ina, a|, in'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire' "Object for entire file. key: ae ie (omit empty lines at start or end)
+Plugin 'kana/vim-textobj-indent' "Object for indentation level. key: ai (with sub indents), aI (only current indent level)
 
 call vundle#end()
 " Brief help
