@@ -63,7 +63,8 @@ if &term =~ '^screen'
   set ttymouse=xterm2
 endif
 set clipboard=unnamed "copy to system clipboard
-set nrformats=
+set nrformats= "use always base 10 numbers"
+set virtualedit=block "move in visual block mode beyound eol"
 " paste with auto indent
 nnoremap p p=`]
 set wildmenu "command-line completion with <tab>
