@@ -12,7 +12,8 @@ set ignorecase
 set smartcase
 set incsearch
 set nrformats=
-
+set cursorline
+highlight CursorLine cterm=none ctermbg=237
 syntax on
 filetype plugin on
 " Automatic reloading of .vimrc
