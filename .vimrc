@@ -64,9 +64,9 @@ if &term =~ '^screen'
 endif
 set clipboard=unnamed "copy to system clipboard
 set nrformats= "use always base 10 numbers"
+set splitbelow "new splits below current
+set splitright "new splits right to the current
 set virtualedit=block "move in visual block mode beyound eol"
-" paste with auto indent
-nnoremap p p=`]
 set wildmenu "command-line completion with <tab>
 set gdefault "substitue globally on lines %s/a/b/ instead %s/a/b/g
 filetype plugin indent on "indent automaticly
@@ -122,6 +122,8 @@ inoremap <C-e> <C-o>$
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+" paste with auto indent
+nnoremap p p=`]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Autocommands
