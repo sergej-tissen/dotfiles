@@ -185,6 +185,11 @@ map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map n <Plug>(easymotion-next)
 map N <Plug>(easymotion-prev)
+let g:EasyMotion_use_upper = 1
+let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ,'
+highlight! link EasyMotionIncSearch IncSearch
+highlight! link EasyMotionTarget2First IncSearch
+highlight! link EasyMotionTarget2Second IncSearch
 
 " Airline
 let g:airline_theme = 'bubblegum'
