@@ -23,7 +23,7 @@ Plugin 'isRuslan/vim-es6' "es6 snippets
 Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
 Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av
 Plugin 'mtscout6/syntastic-local-eslint.vim' "Use project specific eslint
-Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>m
+Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>mf
 Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
 Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
 Plugin 'sheerun/vim-polyglot' "Language Support for many languages
@@ -124,6 +124,8 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 " paste with auto indent
 nnoremap p p=`]
+nnoremap <leader>mi :%s///c<left><left>
+nnoremap <leader>ma :cdo s///c \| up<left><left><left><left><left><left><left>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Autocommands
@@ -269,7 +271,7 @@ nmap <leader>hh <Plug>GitGutterNextHunk
 nmap <leader>hk <Plug>GitGutterPrevHunk
 
 " EnMasse
-nnoremap <leader>m :EnMasse<CR>
+nnoremap <leader>mf :EnMasse<CR>
 
 " Argwrap
 nnoremap <silent> <leader>gw :ArgWrap<CR>
