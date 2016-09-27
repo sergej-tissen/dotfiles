@@ -19,7 +19,7 @@
   com = checkout master
   col = checkout -	
   df = !clear && git diff --word-diff
-  sh = show --histogram --word-diff
+  sh = !clear && git show --histogram --word-diff
   aa = !git add . && git status
   au = !git add -u . && git status
   sd = !clear && git s && git diff --word-diff
