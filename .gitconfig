@@ -11,18 +11,18 @@
 [push]
   default = simple
 [alias]
-  lg = log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
+  lg = !clear && git log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
   s = status --short --branch
   ca = commit -am
   c = commit -m
   co = checkout
   com = checkout master
   col = checkout -	
-  df = diff --word-diff
+  df = !clear && git diff --word-diff
   sh = show --histogram --word-diff
   aa = !git add . && git status
   au = !git add -u . && git status
-  sd = !clear && git s && git df
+  sd = !clear && git s && git diff --word-diff
   st  = stash --include-untracked
   sp = stash pop
   mf = merge --ff-only
