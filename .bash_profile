@@ -22,7 +22,7 @@ alias tmka='tmux kill-session -a && tmux kill-session && tmux ls'
 alias tma='tmux a'
 alias tml='tmux ls'
 alias tmux="TERM=screen-256color-bce tmux -2"
-tmd () {
+tme () {
   folderName=${PWD##*/}
   if (tmux has-session -t "${folderName}"); then
     tmux -2 attach -t "${folderName}"
@@ -37,7 +37,7 @@ tmd () {
   fi
 }
 
-tmdd () {
+tmd () {
   folderName=${PWD##*/}
   if (tmux has-session -t "${folderName}"); then
     tmux -2 attach -t "${folderName}"
