@@ -120,9 +120,6 @@ nnoremap <Leader><s-Tab> :bnext<CR>
 noremap Y y$
 " goto end of line in insert mode
 inoremap <C-e> <C-o>$
-" Move visual block
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 " paste with auto indent
 nnoremap p p=`]
 nnoremap <leader>mi :%s///c<left><left>
