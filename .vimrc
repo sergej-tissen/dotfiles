@@ -33,7 +33,6 @@ Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
 Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
-Plugin 'terryma/vim-multiple-cursors' "multiple cursors. key: C-m C-x C-p
 Plugin 'sheerun/vim-polyglot' "Language Support for many languages
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'honza/vim-snippets' "snippets
@@ -97,7 +96,7 @@ set nowritebackup
 set noswapfile
 " 5 rows offset when scrolling
 set scrolloff=5
-
+set history=200 "remember last commands
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
