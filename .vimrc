@@ -52,6 +52,7 @@ call vundle#end()
 " :PluginInstall - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginClean - confirms removal of unused plugins; append `!` to auto-approve removal
 " :PluginUpdate - updates installed plugins
+" sort Plugins with :sort '.*/' i
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
