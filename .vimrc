@@ -10,41 +10,41 @@ call vundle#begin()
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
-Plugin 'altercation/vim-colors-solarized' "solarized Theme
-Plugin 'benmills/vimux' "execute tmux command from vim
-Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
-Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p
-Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion /
-Plugin 'edkolev/tmuxline.vim' "airline for tmux
-Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
-Plugin 'honza/vim-snippets' "snippets
-Plugin 'isRuslan/vim-es6' "es6 snippets
-Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
 Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av
-Plugin 'mtscout6/syntastic-local-eslint.vim' "Use project specific eslint
-Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>mf
-Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
-Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
-Plugin 'sheerun/vim-polyglot' "Language Support for many languages
-Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
-Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
-Plugin 'terryma/vim-multiple-cursors' "multiple cursors. key: C-m C-x C-p
+Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
+Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p
 Plugin 'tmhedberg/matchit' " % for tags
-Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
-Plugin 'tpope/vim-commentary' "comment, uncomment lines key: gc gcc
-Plugin 'tpope/vim-fugitive' "Git support
-Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
-Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds
-Plugin 'Valloric/YouCompleteMe' "Code completion
+Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
+Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
+Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
+Plugin 'mtscout6/syntastic-local-eslint.vim' "Use project specific eslint
+Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&\=. key: Ina, a|, in'
+Plugin 'edkolev/tmuxline.vim' "airline for tmux
+Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
+Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'vim-airline/vim-airline' "Statusbar
 Plugin 'vim-airline/vim-airline-themes' "Theme for airline
-Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
-Plugin 'vim-scripts/ZoomWin' "Zoom Pane in/out. key: Ctrl-w o
-Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&/\=. key: Ina, a|, in'
-Plugin 'kana/vim-textobj-user'
+Plugin 'altercation/vim-colors-solarized' "solarized Theme
+Plugin 'tpope/vim-commentary' "comment, uncomment lines key: gc gcc
+Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion 
+Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>mf
+Plugin 'isRuslan/vim-es6' "es6 snippets
+Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
+Plugin 'tpope/vim-fugitive' "Git support
+Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
+Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
+Plugin 'terryma/vim-multiple-cursors' "multiple cursors. key: C-m C-x C-p
+Plugin 'sheerun/vim-polyglot' "Language Support for many languages
+Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
+Plugin 'honza/vim-snippets' "snippets
+Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds
 Plugin 'kana/vim-textobj-entire' "Object for entire file. key: ae ie (omit empty lines at start or end)
 Plugin 'kana/vim-textobj-indent' "Object for indentation level. key: ai (with sub indents), aI (only current indent level)
+Plugin 'kana/vim-textobj-user'
+Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
+Plugin 'benmills/vimux' "execute tmux command from vim
+Plugin 'Valloric/YouCompleteMe' "Code completion
+Plugin 'vim-scripts/ZoomWin' "Zoom Pane in,out. key: Ctrl-w o
 
 call vundle#end()
 " Brief help
