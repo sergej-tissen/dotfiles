@@ -113,8 +113,6 @@ set listchars=tab:▸\ ,trail:·
 let mapleader = " "
 " Do not enter  Ex Mode
 nnoremap Q <nop>
-" Do not use for scroll. Use as tmux prefix
-nnoremap <c-f> <nop>
 map j gj
 map k gk
 inoremap <c-s> <Esc>:w<CR>
@@ -131,6 +129,7 @@ noremap Y y$
 inoremap <C-e> <C-o>$
 " paste with auto indent
 nnoremap p p=`]
+" replace in file / project
 nnoremap <leader>mi :%s///c<left><left>
 nnoremap <leader>ma :cdo s///c \| up<left><left><left><left><left><left><left>
 
