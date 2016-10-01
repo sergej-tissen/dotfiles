@@ -97,6 +97,16 @@ set noswapfile
 " 5 rows offset when scrolling
 set scrolloff=5
 set history=200 "remember last commands
+
+" Layout
+syntax enable
+set t_Co=16 " 16 colors
+set background=dark
+colorscheme solarized
+set cursorline
+set list "show tab and trailing space symbols
+set listchars=tab:▸\ ,trail:·
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -281,15 +291,3 @@ let g:hardtime_showmsg = 1
 let g:hardtime_ignore_quickfix = 1
 let g:hardtime_allow_different_key = 1
 nnoremap <Leader>x :HardTimeToggle<CR>
-
-" Sorarized
-syntax enable
-set t_Co=16 " 16 colors
-set background=dark
-colorscheme solarized
-set cursorline
-set list "show tab and trailing space symbols
-set listchars=tab:▸\ ,trail:·
-
-" Multiple Cursors
-let g:multi_cursor_next_key='<C-m>'
