@@ -80,6 +80,7 @@ parse_git_branch() {
 export PS1="\[\033[31m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[m\]$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+export EDITOR=vim
 
 if [ "$(uname)" == "Darwin" ]; then
   # Do something under Mac OS X platform
