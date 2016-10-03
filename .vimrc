@@ -189,6 +189,7 @@ let g:ctrlp_by_filename = 1
 nnoremap <silent><leader>ref :YcmCompleter GoTo<CR>
 nnoremap <leader>ren :YcmCompleter RefactorRename<Space>
 set completeopt-=preview
+let g:ycm_semantic_triggers = {'css': [ 're!^\s{2}', 're!:\s+' ],}
 
 " Easymotion
 let g:EasyMotion_smartcase = 1
