@@ -121,8 +121,8 @@ nnoremap <leader><cr> o<Esc>
 nnoremap <c-q> :q<cr>
 " Navigate Buffers
 nnoremap <leader>q :bd<cr>
-nnoremap <Leader><Tab> :bprevious<CR>
-nnoremap <Leader><s-Tab> :bnext<CR>
+nnoremap <Tab> :bprevious<CR>
+nnoremap <s-Tab> :bnext<CR>
 " Y behaves like C and D
 noremap Y y$
 " goto end of line in insert mode
@@ -261,7 +261,7 @@ nnoremap <Leader>aw :Ack!<Space><C-R><C-W><CR>
 vnoremap <Leader>av y:Ack!<Space>"<C-R>""<CR>
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<C-c>"
+let g:UltiSnipsExpandTrigger="<CR>"
 let g:UltiSnipsJumpForwardTrigger="<C-c>"
 let g:UltiSnipsJumpBackwardTrigger="<C-x>"
 
