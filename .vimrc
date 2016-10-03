@@ -195,8 +195,10 @@ let g:EasyMotion_smartcase = 1
 map <Leader> <Plug>(easymotion-prefix)
 nmap <leader>s <Plug>(easymotion-s2)
 omap <leader>s <Plug>(easymotion-s2)
-map / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
+map / <Plug>(easymotion-sn)\V\c
+map <leader>/ <Plug>(easymotion-sn)\v
+omap / <Plug>(easymotion-tn)\V\c
+omap <leader>/ <Plug>(easymotion-tn)\v
 map n <Plug>(easymotion-next)
 map N <Plug>(easymotion-prev)
 let g:EasyMotion_use_upper = 1
