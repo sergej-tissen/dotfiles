@@ -202,7 +202,7 @@ omap <leader>/ <Plug>(easymotion-tn)\v
 map n <Plug>(easymotion-next)
 map N <Plug>(easymotion-prev)
 let g:EasyMotion_use_upper = 1
-let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ,'
+let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ;'
 highlight! link EasyMotionIncSearch IncSearch
 highlight! link EasyMotionTarget2First IncSearch
 highlight! link EasyMotionTarget2Second IncSearch
