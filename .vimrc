@@ -262,7 +262,7 @@ nnoremap <Leader>aw :Ack!<Space><C-R><C-W><CR>
 vnoremap <Leader>av y:Ack!<Space>"<C-R>""<CR>
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<CR>"
+let g:UltiSnipsExpandTrigger="<C-c>"
 let g:UltiSnipsJumpForwardTrigger="<C-c>"
 let g:UltiSnipsJumpBackwardTrigger="<C-x>"
 
