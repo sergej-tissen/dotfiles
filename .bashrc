@@ -92,3 +92,5 @@ fi
 # capslock as esc and ctrl
 setxkbmap -option 'caps:ctrl_modifier'
 xcape -e 'Control_L=Escape'
+
+export PATH="$PATH:/home/sergej/apache-maven-3.3.9/bin"
