@@ -128,7 +128,7 @@ noremap Y y$
 " goto end of line in insert mode
 inoremap <C-e> <C-o>$
 " paste with auto indent
-nnoremap p p=`]
+" nnoremap p p=`]
 " replace in file / project
 nnoremap <leader>mi :%s///c<left><left>
 nnoremap <leader>ma :cdo s///c \| up<left><left><left><left><left><left><left>
