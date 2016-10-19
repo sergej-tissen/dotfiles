@@ -1,0 +1,21 @@
+# Custom key mappings
+unmap H
+map H previousTab
+unmap L
+map L nextTab
+unmap J
+map J goBack
+unmap K
+map K goForward
+
+#Custom search engines
+w: http://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia
+d: https://developer.mozilla.org/de/search?q=%s MDN
+m: https://www.google.com/maps?q=%s Google maps
+a: http://www.amazon.com/s/?field-keywords=%s Amazon
+
+#Characters used for link hints
+sadfjklewcmpgh;
+
+# Miscellaneous options
+Treat find queries as regular expressions
