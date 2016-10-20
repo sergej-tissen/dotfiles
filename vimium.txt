@@ -1,11 +1,7 @@
 # Custom key mappings
-unmap H
 map H previousTab
-unmap L
 map L nextTab
-unmap J
 map J goBack
-unmap K
 map K goForward
 
 #Custom search engines
