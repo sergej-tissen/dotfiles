@@ -32,9 +32,10 @@
   undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
   work = "config --local user.email tissen@jochen-schweizer.de"
 [merge]
-  tool = kdiff3
+  tool = vimdiff
+  conflictstyle = diff3
   keepBackup = false
-[mergetool "kdiff3"]
-  path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+[mergetool]
+  prompt = false
 [diff]
   algorithm = histogram
