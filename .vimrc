@@ -24,6 +24,7 @@ Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'vim-airline/vim-airline' "Statusbar
 Plugin 'vim-airline/vim-airline-themes' "Theme for airline
+Plugin 'alvan/vim-closetag'
 Plugin 'altercation/vim-colors-solarized' "solarized Theme
 Plugin 'tpope/vim-commentary' "comment, uncomment lines key: gc gcc
 Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion 
