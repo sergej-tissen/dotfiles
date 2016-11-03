@@ -36,7 +36,7 @@ Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: 
 Plugin 'sheerun/vim-polyglot' "Language Support for many languages
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'honza/vim-snippets' "snippets
-Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds
+Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds Visual Mode: S
 Plugin 'kana/vim-textobj-entire' "Object for entire file. key: ae ie (omit empty lines at start or end)
 Plugin 'kana/vim-textobj-indent' "Object for indentation level. key: ai (with sub indents), aI (only current indent level)
 Plugin 'kana/vim-textobj-user'
