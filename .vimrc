@@ -98,6 +98,9 @@ set noswapfile
 " 5 rows offset when scrolling
 set scrolloff=5
 set history=200 "remember last commands
+" use gf to open files
+set path=**
+set suffixesadd=.js,.html,.css,.json,.md,.apib
 
 " Layout
 syntax enable

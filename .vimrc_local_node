@@ -9,5 +9,3 @@ map <leader>rww :wa <bar> :call VimuxRunCommand('clear && npm run watch')<cr>
 map <leader>rwu :wa <bar> :call VimuxRunCommand('clear && npm run watch:test:unit')<cr>
 map <leader>rf :w <bar> :call VimuxRunCommand('clear && node ' .  bufname('%'))<cr>
 map <leader>rwf :w <bar> :call VimuxRunCommand('clear && nodemon -q ' .  bufname('%'))<cr>
-set path=**
-set suffixesadd=.js,.html,.css,.json,.md,.apib
