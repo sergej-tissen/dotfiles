@@ -56,7 +56,7 @@ tmd () {
     tmux select-window -t "${folderName}:1"
     tmux split-window -v -p 25
     tmux split-window -h -p 60
-    tmux send-keys 'npm run watch:test:unit' Enter
+    tmux send-keys 'npm run watch:test:unit-api' Enter
     tmux split-window -h -p 33
     tmux send-keys 'npm start' Enter
     tmux select-pane -t 2
