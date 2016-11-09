@@ -28,8 +28,6 @@ tme () {
     tmux -2 attach -t "${folderName}"
   else
     tmux new -s "${folderName}" -n dev -d
-    tmux new-window -t "${folderName}:2" -n "etc"
-    tmux select-window -t "${folderName}:1"
     tmux split-window -h -p 45
     tmux select-pane -t 1
     tmux send-keys 'vim' Enter
@@ -43,8 +41,7 @@ tmd () {
     tmux -2 attach -t "${folderName}"
   else
     tmux new -s "${folderName}" -n dev -d
-    tmux new-window -t "${folderName}:2" -n "etc"
-    tmux new-window -t "${folderName}:3" -n "live-reload"
+    tmux new-window -t "${folderName}:2" -n "live-reload"
     if [ "$(uname)" == "Darwin" ]; then
       tmux send-keys 'open /Applications/Firefox.app/' Enter
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
@@ -52,7 +49,6 @@ tmd () {
     fi
     tmux split-window -h
     tmux send-keys 'npm run live-reload' Enter
-    tmux select-window -t "${folderName}:2"
     tmux select-window -t "${folderName}:1"
     tmux split-window -v -p 25
     tmux split-window -h -p 60
