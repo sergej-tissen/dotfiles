@@ -242,7 +242,7 @@ let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " Vim-Tmux-Navigator
-let g:tmux_navigator_save_on_switch = 1
+let g:tmux_navigator_save_on_switch = 2
 
 " Tmuxline
 let g:tmuxline_powerline_separators = 0

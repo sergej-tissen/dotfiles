@@ -1,5 +1,8 @@
 " run in node-project: ln -s ~/dotfiles/.vimrc_local .vimrc
 let g:syntastic_javascript_checkers = ['eslint'] "run eslint
+
+autocmd BufLeave,FocusLost * silent! wall
+
 map <leader>rns :wa <bar> :call VimuxRunCommand('clear && npm start')<cr>
 map <leader>rnb :wa <bar> :call VimuxRunCommand('clear && npm run build')<cr>
 map <leader>rnt :wa <bar> :call VimuxRunCommand('clear && npm test')<cr>
