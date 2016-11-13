@@ -11,24 +11,26 @@
 [push]
   default = simple
 [alias]
-  lg = !clear && git log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
-  s = status --short --branch
-  ca = commit -am
-  c = commit -m
-  co = checkout
-  com = checkout master
-  col = checkout -	
-  df = !clear && git diff --word-diff
-  sh = !clear && git show --histogram --word-diff
   aa = !git add . && git status
   au = !git add -u . && git status
-  sd = !clear && git s && git diff --word-diff
-  st  = stash --include-untracked
-  sp = stash pop
+  c = commit -m
+  ca = commit -am
+  cam = commit --amend --no-edit
+  caam = commit -a --amend --no-edit
+  co = checkout
+  col = checkout -
+  com = checkout master
+  df = !clear && git diff --word-diff
+  lg = !clear && git log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
   mf = merge --ff-only
   mt = merge --no-ff
   qmf = "!git checkout $1;git mf @{-1}"
-  qmt = "!git checkout $1;git mt @{-1}"			
+  qmt = "!git checkout $1;git mt @{-1}"
+  s = status --short --branch
+  sd = !clear && git s && git diff --word-diff
+  sh = !clear && git show --histogram --word-diff
+  sp = stash pop
+  st  = stash --include-untracked
   undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
   work = "config --local user.email tissen@jochen-schweizer.de"
 [merge]
