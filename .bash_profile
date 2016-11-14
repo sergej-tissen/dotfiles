@@ -63,6 +63,36 @@ tmd () {
     :vsp
   fi
 }
+
+tmdd () {
+  folderName=${PWD##*/}
+  if (tmux has-session -t "${folderName}"); then
+    tmux -2 attach -t "${folderName}"
+  else
+    tmux new -s "${folderName}" -n dev -d
+    tmux new-window -t "${folderName}:2" -n "live-reload"
+    if [ "$(uname)" == "Darwin" ]; then
+      tmux send-keys 'open /Applications/Firefox.app/' Enter
+    elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+      tmux send-keys 'firefox' Enter
+    fi
+    tmux split-window -h
+    tmux send-keys 'npm run live-reload' Enter
+    tmux select-window -t "${folderName}:1"
+    tmux split-window -v -p 25
+    tmux split-window -h -p 58
+    tmux send-keys 'npm run watch:test:unit-api' Enter
+    tmux split-window -h -p 57
+    tmux send-keys 'npm start' Enter
+    tmux select-pane -t 2
+    tmux select-pane -t 1
+    tmux send-keys 'vim' Enter
+    tmux send-keys ':vsp' Enter
+    tmux send-keys ':vsp' Enter
+    tmux -2 attach-session -t "${folderName}"
+    :vsp
+  fi
+}
 bind -r '\C-s'
 stty -ixon
 
