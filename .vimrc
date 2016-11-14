@@ -34,7 +34,6 @@ Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
 Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
-Plugin 'sheerun/vim-polyglot' "Language Support for many languages
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'honza/vim-snippets' "snippets
 Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds Visual Mode: S
@@ -45,6 +44,15 @@ Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 Plugin 'benmills/vimux' "execute tmux command from vim
 Plugin 'Valloric/YouCompleteMe' "Code completion
 Plugin 'vim-scripts/ZoomWin' "Zoom Pane in,out. key: Ctrl-w o
+" Language Plugins
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/html5.vim'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'honza/dockerfile.vim'
+Plugin 'elzr/vim-json'
+Plugin 'posva/vim-vue'
 
 call vundle#end()
 " Brief help
@@ -142,7 +150,7 @@ nnoremap <leader>ma :cdo s///c \| up<left><left><left><left><left><left><left>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd BufRead,BufNewFile *.apib set filetype=markdown
-autocmd BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.scss set filetype=scss.css
 autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
 
 " Load manpages with :Man
@@ -300,3 +308,6 @@ let g:hardtime_showmsg = 1
 let g:hardtime_ignore_quickfix = 1
 let g:hardtime_allow_different_key = 1
 nnoremap <Leader>x :HardTimeToggle<CR>
+
+" Markdown
+let g:vim_markdown_folding_disabled = 1
