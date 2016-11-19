@@ -41,3 +41,5 @@
   prompt = false
 [diff]
   algorithm = histogram
+[rerere]
+	enabled = true
