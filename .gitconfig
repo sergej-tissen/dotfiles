@@ -21,6 +21,7 @@
   col = checkout -
   com = checkout master
   df = !clear && git diff --word-diff
+  gp = grep -n --heading --break
   lg = !clear && git log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
   mf = merge --ff-only
   mt = merge --no-ff
