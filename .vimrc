@@ -109,6 +109,8 @@ set history=200 "remember last commands
 " use gf to open files
 set path=**
 set suffixesadd=.js,.html,.css,.json,.md,.apib
+" open diffsplit vertically
+set diffopt=filler,vertical
 
 " Layout
 syntax enable
