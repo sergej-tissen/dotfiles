@@ -43,9 +43,9 @@ tmd () {
     tmux new -s "${folderName}" -n dev -d
     tmux new-window -t "${folderName}:2" -n "live-reload"
     if [ "$(uname)" == "Darwin" ]; then
-      tmux send-keys 'open /Applications/Firefox.app/' Enter
+      tmux send-keys 'npm run browser:mac' Enter
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-      tmux send-keys 'firefox' Enter
+      tmux send-keys 'npm run browser:linux' Enter
     fi
     tmux split-window -h
     tmux send-keys 'npm run live-reload' Enter
@@ -72,9 +72,9 @@ tmdd () {
     tmux new -s "${folderName}" -n dev -d
     tmux new-window -t "${folderName}:2" -n "live-reload"
     if [ "$(uname)" == "Darwin" ]; then
-      tmux send-keys 'open /Applications/Firefox.app/' Enter
+      tmux send-keys 'npm run browser:mac' Enter
     elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-      tmux send-keys 'firefox' Enter
+      tmux send-keys 'npm run browser:linux' Enter
     fi
     tmux split-window -h
     tmux send-keys 'npm run live-reload' Enter
