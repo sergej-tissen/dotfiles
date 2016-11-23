@@ -111,9 +111,11 @@ export EDITOR=vim
 if [ "$(uname)" == "Darwin" ]; then
   # Do something under Mac OS X platform
   export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+  complete -C '/usr/local/bin/aws_completer' aws
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   # Do something under GNU/Linux platform
   if [ -f ~/.bashrc ]; then
     source ~/.bashrc
   fi
+  complete -C '/home/sergej/.local/bin/aws_completer' aws
 fi
