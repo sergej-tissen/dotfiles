@@ -118,4 +118,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     source ~/.bashrc
   fi
   complete -C '/home/sergej/.local/bin/aws_completer' aws
+  # capslock as esc and ctrl
+  setxkbmap -option 'caps:ctrl_modifier'
+  xcape -e 'Control_L=Escape'
 fi
