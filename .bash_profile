@@ -122,3 +122,4 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   setxkbmap -option 'caps:ctrl_modifier'
   xcape -e 'Control_L=Escape'
 fi
+. ~/git-completion.bash

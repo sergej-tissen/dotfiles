@@ -20,7 +20,7 @@
   co = checkout
   col = checkout -
   com = checkout master
-  df = !clear && git diff --word-diff
+  df = !clear && git diff --word-diff=color
   gp = grep -n --heading --break
   lg = !clear && git log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
   mf = merge --ff-only
@@ -28,8 +28,8 @@
   qmf = "!git checkout $1;git mf @{-1}"
   qmt = "!git checkout $1;git mt @{-1}"
   s = status --short --branch
-  sd = !clear && git s && git diff --word-diff
-  sh = !clear && git show --histogram --word-diff
+  sd = !clear && git s && git diff --word-diff=color
+  sh = !clear && git show --histogram --word-diff=color
   sp = stash pop
   st  = stash --include-untracked
   undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
