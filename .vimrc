@@ -120,6 +120,15 @@ colorscheme solarized
 set cursorline
 set list "show tab and trailing space symbols
 set listchars=tab:▸\ ,trail:·
+" gvim layout settings
+let g:solarized_italic = 0
+let g:solarized_bold = 0
+set guifont=Lucida_Console:h10 "set font for gvim
+highlight iCursor guifg=black guibg=grey
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
