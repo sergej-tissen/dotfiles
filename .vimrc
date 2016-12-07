@@ -208,7 +208,7 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 2
 " search only filename, not the path
-let g:ctrlp_by_filename = 1
+" let g:ctrlp_by_filename = 1
 
 " YCM
 nnoremap <silent><leader>ref :YcmCompleter GoTo<CR>
