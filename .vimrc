@@ -143,7 +143,7 @@ nnoremap <c-s> :w<CR>
 nnoremap <leader><cr> o<Esc>
 nnoremap <c-q> :q<cr>
 " Navigate Buffers
-nnoremap <leader>q :bd<cr>
+nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 nnoremap <Tab> :bprevious<CR>
 nnoremap <s-Tab> :bnext<CR>
 " Y behaves like C and D
