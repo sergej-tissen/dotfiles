@@ -143,8 +143,8 @@ nnoremap <c-s> :w<CR>
 nnoremap <c-q> :q<cr>
 " Navigate Buffers
 nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
-nnoremap <Tab> :bprevious<CR>
-nnoremap <s-Tab> :bnext<CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap <s-Tab> :bprevious<CR>
 " Y behaves like C and D
 noremap Y y$
 " goto end of line in insert mode
@@ -235,8 +235,10 @@ let g:airline_theme = 'bubblegum'
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#buffer_idx_mode = 0
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#buffers_label = ''
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let airline#extensions#tmuxline#color_template = 'visual'
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
