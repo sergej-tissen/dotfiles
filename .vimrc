@@ -15,6 +15,7 @@ Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
 Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p
 Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
+Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
 Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
 Plugin 'mtscout6/syntastic-local-eslint.vim' "Use project specific eslint
@@ -323,3 +324,11 @@ nnoremap <Leader>x :HardTimeToggle<CR>
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
+
+" Rainbow Parentheses
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+let g:rainbow#blacklist = [237, 238]
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType javascript,json,css RainbowParentheses
+augroup END
