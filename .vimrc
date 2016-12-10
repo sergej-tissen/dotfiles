@@ -140,7 +140,6 @@ map j gj
 map k gk
 inoremap <c-s> <Esc>:w<CR>
 nnoremap <c-s> :w<CR>
-nnoremap <leader><cr> o<Esc>
 nnoremap <c-q> :q<cr>
 " Navigate Buffers
 nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
@@ -150,8 +149,6 @@ nnoremap <s-Tab> :bnext<CR>
 noremap Y y$
 " goto end of line in insert mode
 inoremap <C-e> <C-o>$
-" paste with auto indent
-" nnoremap p p=`]
 " replace in file / project
 nnoremap <leader>mi :%s///c<left><left>
 nnoremap <leader>ma :cdo s///c \| up<left><left><left><left><left><left><left>
@@ -163,7 +160,7 @@ nnoremap <leader>dw :%s/\s\+$//e<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd BufRead,BufNewFile *.apib set filetype=markdown
-au BufRead,BufNewFile *.scss set filetype=scss.css
+autocmd BufRead,BufNewFile *.scss set filetype=scss.css
 autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
 
 " Load manpages with :Man
