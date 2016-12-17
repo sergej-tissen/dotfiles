@@ -36,6 +36,7 @@ Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
 Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
+Plugin 'kshenoy/vim-signature' "show marks. key: remove mark: dm[mark], delete all marks in buffer: m<space>
 Plugin 'honza/vim-snippets' "snippets
 Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds Visual Mode: S
 Plugin 'kana/vim-textobj-entire' "Object for entire file. key: ae ie (omit empty lines at start or end)
