@@ -93,6 +93,7 @@ set number "show line numbers
 set nolazyredraw "don't redraw while executing macros
 set dy+=lastline "show last line if it's too long
 set breakindent "wrap line according to indent
+set linebreak "do not break in the middle of a word
 set updatetime=250 "update vim each 250ms
 " load local .vimrc files
 set exrc
@@ -137,8 +138,16 @@ set guicursor+=i:blinkwait10
 let mapleader = " "
 " Do not enter  Ex Mode
 nnoremap Q <nop>
-map j gj
-map k gk
+nmap j gj
+nmap k gk
+nmap $ g$
+nmap 0 g0
+nmap ^ g^
+vmap j gj
+vmap k gk
+vmap $ g$
+vmap 0 g0
+vmap ^ g^
 inoremap <c-s> <Esc>:w<CR>
 nnoremap <c-s> :w<CR>
 nnoremap <c-q> :q<cr>
