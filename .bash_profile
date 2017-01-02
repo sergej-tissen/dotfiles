@@ -30,6 +30,9 @@ tme () {
     tmux -2 attach -t "${folderName}"
   else
     tmux new -s "${folderName}" -n dev -d
+    tmux new-window -t "${folderName}:2" -n "misc"
+    tmux split-window -h
+    tmux select-window -t "${folderName}:1"
     tmux split-window -h -p 45
     tmux select-pane -t 1
     tmux send-keys 'vim' Enter
@@ -43,6 +46,9 @@ tmd () {
     tmux -2 attach -t "${folderName}"
   else
     tmux new -s "${folderName}" -n dev -d
+    tmux new-window -t "${folderName}:2" -n "misc"
+    tmux split-window -h
+    tmux select-window -t "${folderName}:1"
     # tmux new-window -t "${folderName}:2" -n "live-reload"
     # if [ "$(uname)" == "Darwin" ]; then
     #   tmux send-keys 'npm run browser:mac' Enter
