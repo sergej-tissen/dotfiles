@@ -54,7 +54,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'honza/dockerfile.vim'
 Plugin 'elzr/vim-json'
-Plugin 'posva/vim-vue'
+Plugin 'stephpy/vim-yaml'
 
 call vundle#end()
 " Brief help
