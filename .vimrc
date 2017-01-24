@@ -155,8 +155,7 @@ nnoremap <c-s> :w<CR>
 nnoremap <c-q> :q<cr>
 " Navigate Buffers
 nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
-nnoremap <Tab> :bnext<CR>
-nnoremap <s-Tab> :bprevious<CR>
+nnoremap <s-Tab> <c-^>
 " Y behaves like C and D
 noremap Y y$
 " goto end of line in insert mode
