@@ -48,6 +48,7 @@ tmd () {
     tmux new -s "${folderName}" -n dev -d
     tmux new-window -t "${folderName}:2" -n "misc"
     tmux split-window -h
+    tmux select-pane -t 1
     tmux select-window -t "${folderName}:1"
     # tmux new-window -t "${folderName}:2" -n "live-reload"
     # if [ "$(uname)" == "Darwin" ]; then
@@ -58,15 +59,16 @@ tmd () {
     # tmux split-window -h
     # tmux send-keys 'npm run live-reload' Enter
     # tmux select-window -t "${folderName}:1"
-    tmux split-window -v -p 25
-    tmux split-window -h -p 60
-    tmux send-keys 'npm run watch:test' Enter
-    tmux split-window -h -p 33
+    tmux split-window -v -p 30
+    tmux split-window -h -p 65
+    tmux send-keys 'npm run watch:test:coverage' Enter
+    tmux split-window -h -p 30
     tmux send-keys 'npm start' Enter
     tmux select-pane -t 2
     tmux select-pane -t 1
     tmux send-keys 'vim' Enter
     tmux send-keys ':vsp' Enter
+    tmux send-keys 'C-h'
     tmux -2 attach-session -t "${folderName}"
     :vsp
   fi
