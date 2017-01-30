@@ -36,6 +36,7 @@ Plugin 'tpope/vim-fugitive' "Git support
 Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
 Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
 Plugin 'nathanaelkane/vim-indent-guides' "display indent levels. key: toggle <leader> ig
+Plugin 'suan/vim-instant-markdown' "Run '[sudo] npm -g install instant-markdown-d'. key: toggle <leader>o
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'kshenoy/vim-signature' "show marks. key: remove mark: dm[mark], delete all marks in buffer: m<space>
 Plugin 'honza/vim-snippets' "snippets
@@ -347,3 +348,7 @@ augroup END
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 " let g:indent_guides_enable_on_vim_startup=1
+
+" Instant Markdown
+let g:instant_markdown_autostart = 0
+nnoremap <leader>o :InstantMarkdownPreview<CR>
