@@ -173,6 +173,7 @@ nnoremap <leader>dw :%s/\s\+$//e<CR>
 
 autocmd BufRead,BufNewFile *.apib set filetype=markdown
 autocmd BufRead,BufNewFile *.scss set filetype=scss.css
+autocmd BufRead,BufNewFile *.ejs set filetype=html
 autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
 
 " Load manpages with :Man
@@ -347,8 +348,10 @@ augroup END
 " Indent Guides
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
-" let g:indent_guides_enable_on_vim_startup=1
 
 " Instant Markdown
 let g:instant_markdown_autostart = 0
 nnoremap <leader>o :InstantMarkdownPreview<CR>
+
+" Closetag
+let g:closetag_filenames = "*.html,*.xhtml,*.ejs"
