@@ -221,8 +221,8 @@ let g:ctrlp_working_path_mode = 2
 " let g:ctrlp_by_filename = 1
 
 " YCM
-nnoremap <silent><leader>ref :YcmCompleter GoTo<CR>
-nnoremap <leader>ren :YcmCompleter RefactorRename<Space>
+nnoremap <silent><leader>rf :YcmCompleter GoTo<CR>
+nnoremap <leader>rn :YcmCompleter RefactorRename<Space>
 set completeopt-=preview
 let g:ycm_semantic_triggers = {'css': [ 're!^\s{2}', 're!:\s+' ],}
 
