@@ -1,0 +1,17 @@
+set ignorecase
+set smartcase
+set incsearch
+set cursorline
+set clipboard=unnamedplus
+
+map <space>1 1gt
+map <space>2 2gt
+map <space>3 3gt
+map <space>4 4gt
+map <space>5 5gt
+map <space>6 6gt
+map <space>7 7gt
+map <space>8 8gt
+map <space>9 9gt
+map <C-l> :tabnext<cr>
+map <C-h> :tabprevious<cr>

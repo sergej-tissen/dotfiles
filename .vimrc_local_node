@@ -3,12 +3,5 @@ let g:syntastic_javascript_checkers = ['eslint'] "run eslint
 
 autocmd BufLeave,FocusLost * silent! wall
 
-map <leader>rns :wa <bar> :call VimuxRunCommand('clear && npm start')<cr>
-map <leader>rnb :wa <bar> :call VimuxRunCommand('clear && npm run build')<cr>
-map <leader>rnt :wa <bar> :call VimuxRunCommand('clear && npm test')<cr>
-map <leader>rnl :wa <bar> :call VimuxRunCommand('clear && npm run lint')<cr>
-map <leader>rnu :wa <bar> :call VimuxRunCommand('clear && npm run test:unit')<cr>
-map <leader>rww :wa <bar> :call VimuxRunCommand('clear && npm run watch')<cr>
-map <leader>rwu :wa <bar> :call VimuxRunCommand('clear && npm run watch:test:unit')<cr>
-map <leader>rf :w <bar> :call VimuxRunCommand('clear && node ' .  bufname('%'))<cr>
-map <leader>rwf :w <bar> :call VimuxRunCommand('clear && nodemon -q ' .  bufname('%'))<cr>
+map <leader>ir :w <bar> :call VimuxRunCommand('clear && node ' .  bufname('%'))<cr>
+map <leader>iw :w <bar> :call VimuxRunCommand('clear && nodemon -q ' .  bufname('%'))<cr>

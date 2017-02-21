@@ -6,7 +6,7 @@ map K goForward
 
 #Custom search engines
 w: http://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia
-d: https://developer.mozilla.org/de/search?q=%s MDN
+md: https://developer.mozilla.org/de/search?q=%s MDN
 m: https://www.google.com/maps?q=%s Google maps
 a: http://www.amazon.com/s/?field-keywords=%s Amazon
 
