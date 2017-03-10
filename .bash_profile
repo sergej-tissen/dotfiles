@@ -14,7 +14,7 @@ alias c='clear'                             # c: Clear terminal display
 alias ag='ag --hidden'                      # include dotfiles
 alias vi='vim'
 alias iv='vim'
-cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
+cd() { builtin cd "$@"; ls -l; }               # Always list directory contents upon 'cd'
 
 alias tmk='tmux kill-session -t ${PWD##*/} && tmux ls'
 alias tmka='tmux kill-session -a && tmux kill-session && tmux ls'
