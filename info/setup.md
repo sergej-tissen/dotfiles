@@ -20,12 +20,12 @@
 - git
 - vim (brew install vim --override-system-vim)
 - tmux
+- reattach-to-user-namespace
 - node
   - upgrade
     - sudo npm cache clean -f
     - sudo npm install -g n
     - sudo n stable
-- redis
 - awscli
 - java (brew cask install java)
 
