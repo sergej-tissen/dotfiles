@@ -29,7 +29,6 @@ Plugin 'alvan/vim-closetag' "key: > , new line with indent: >>
 Plugin 'altercation/vim-colors-solarized' "solarized Theme
 Plugin 'tpope/vim-commentary' "comment, uncomment lines key: gc gcc
 Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion
-Plugin 'Olical/vim-enmasse' "Edit all lines from quickfix window in one buffer. key: <leader>mf
 Plugin 'isRuslan/vim-es6' "es6 snippets
 Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 Plugin 'tpope/vim-fugitive' "Git support
