@@ -218,6 +218,8 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 let g:ctrlp_working_path_mode = 2
 " search only filename, not the path
 " let g:ctrlp_by_filename = 1
+" index all files
+let g:ctrlp_max_files=0
 
 " YCM
 nnoremap <silent><leader>rf :YcmCompleter GoTo<CR>
