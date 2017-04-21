@@ -197,6 +197,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " show only files that are in the buffer
 nmap <silent> <leader>p :CtrlPBuffer<cr>
 let g:ctrlp_show_hidden=1
+" search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 'ra'
 " CtrlP ignore patterns
 let g:ctrlp_custom_ignore = {
@@ -205,8 +206,6 @@ let g:ctrlp_custom_ignore = {
       \ }
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-" search the nearest ancestor that contains .git, .hg, .svn
-let g:ctrlp_working_path_mode = 2
 " search only filename, not the path
 " let g:ctrlp_by_filename = 1
 " index all files
@@ -216,13 +215,12 @@ let g:ctrlp_max_files=0
 nnoremap <silent><leader>rf :YcmCompleter GoTo<CR>
 nnoremap <leader>rn :YcmCompleter RefactorRename<Space>
 set completeopt-=preview
+" show autocompletion for css
 let g:ycm_semantic_triggers = {'css': [ 're!^\s{2}', 're!:\s+' ],}
 
 " Easymotion
 let g:EasyMotion_smartcase = 1
 map <Leader> <Plug>(easymotion-prefix)
-nmap <leader>s <Plug>(easymotion-s2)
-omap <leader>s <Plug>(easymotion-s2)
 map / <Plug>(easymotion-sn)\V\c
 map <leader>/ <Plug>(easymotion-sn)\v
 omap / <Plug>(easymotion-tn)\V\c
@@ -310,9 +308,6 @@ nnoremap <leader>lp :lprev<CR>
 " Gitgutter
 nmap <leader>hh <Plug>GitGutterNextHunk
 nmap <leader>hk <Plug>GitGutterPrevHunk
-
-" EnMasse
-nnoremap <leader>mf :EnMasse<CR>
 
 " Argwrap
 nnoremap <silent> <leader>gw :ArgWrap<CR>
