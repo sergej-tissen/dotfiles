@@ -75,6 +75,7 @@ if &term =~ '^screen'
   set ttymouse=xterm2
 endif
 set clipboard=unnamed "copy to system clipboard
+set noautochdir "do not switch root dir when opening file
 set nrformats= "use always base 10 numbers"
 set splitbelow "new splits below current
 set splitright "new splits right to the current
