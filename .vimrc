@@ -12,7 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av
 Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
-Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p
+Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p, toggle include path: ctrl-d
 Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
 Plugin 'junegunn/rainbow_parentheses.vim'
