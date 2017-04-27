@@ -28,6 +28,7 @@
     - sudo n stable
 - awscli
 - java (brew cask install java)
+- fzf (run this after: /usr/local/opt/fzf/install)
 
 # Config
 - [Keyboard Setting: Caps Lock -> Strg & Esc](https://github.com/wwwjfy/Karabiner-Elements/releases)

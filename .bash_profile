@@ -96,3 +96,6 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR=vim
 export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+
+# fzf plugin
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
