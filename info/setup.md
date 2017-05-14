@@ -17,7 +17,7 @@
 - tree
 - bash-completion
 - the_silver_searcher
-- git
+- git (if not linked: brew link git)
 - vim (brew install vim --override-system-vim)
 - tmux
 - reattach-to-user-namespace

@@ -86,6 +86,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 complete -C '/usr/local/bin/aws_completer' aws
+eval "`npm completion`"
 
 # show current git branch in terminal
 parse_git_branch() {
