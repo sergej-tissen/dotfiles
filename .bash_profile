@@ -6,6 +6,7 @@ alias l='ls -FGlAhp'                       # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias cdd='cd ~/dotfiles'
 alias cdw='cd ~/workspace'
+alias cdc='cd ~/workspace-cc'
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
 alias ....='cd ../../../'                   # Go back 3 directory levels
@@ -47,20 +48,11 @@ tmd () {
     tmux split-window -h
     tmux select-pane -t 1
     tmux select-window -t "${folderName}:1"
-    # tmux new-window -t "${folderName}:2" -n "live-reload"
-    # if [ "$(uname)" == "Darwin" ]; then
-    #   tmux send-keys 'npm run browser:mac' Enter
-    # elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    #   tmux send-keys 'npm run browser:linux' Enter
-    # fi
-    # tmux split-window -h
-    # tmux send-keys 'npm run live-reload' Enter
-    # tmux select-window -t "${folderName}:1"
     tmux split-window -v -p 30
     tmux split-window -h -p 65
     tmux send-keys 'npm run watch:test:coverage' Enter
     tmux split-window -h -p 30
-    tmux send-keys 'npm start' Enter
+    tmux send-keys 'npm start:dev' Enter
     tmux select-pane -t 2
     tmux select-pane -t 1
     tmux send-keys 'vim' Enter
