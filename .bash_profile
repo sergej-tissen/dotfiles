@@ -52,7 +52,7 @@ tmd () {
     tmux split-window -h -p 65
     tmux send-keys 'npm run watch:test:coverage' Enter
     tmux split-window -h -p 30
-    tmux send-keys 'npm start:dev' Enter
+    tmux send-keys 'npm run start:dev' Enter
     tmux select-pane -t 2
     tmux select-pane -t 1
     tmux send-keys 'vim' Enter
