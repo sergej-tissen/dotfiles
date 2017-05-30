@@ -1,4 +1,5 @@
 # Software
+
 - Chrome
 - Brew
 - Dropbox
@@ -14,6 +15,7 @@
 - Docker
 
 # Brew
+
 - tree
 - bash-completion
 - the_silver_searcher
@@ -31,6 +33,7 @@
 - fzf (run this after: /usr/local/opt/fzf/install)
 
 # Config
+
 - [Keyboard Setting: Caps Lock -> Strg & Esc](https://github.com/wwwjfy/Karabiner-Elements/releases)
   - copy karabiner.json to ~/.config/karabiner/karabiner.json
 - Solarized Terminal (myprofile.dark.terminal)
@@ -56,3 +59,17 @@
     - use vimium.txt for config
   - Web Developer
 
+# Vim from source
+
+https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source
+
+```
+./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-rubyinterp \
+            --enable-pythoninterp \
+            --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
+            --enable-perlinterp \
+            --enable-luainterp \
+            --enable-cscope --prefix=/usr --enable-gui=gtk2 --with-x
+```
