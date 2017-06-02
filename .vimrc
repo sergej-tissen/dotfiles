@@ -56,6 +56,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'honza/dockerfile.vim'
 Plugin 'elzr/vim-json'
 Plugin 'stephpy/vim-yaml'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 " Brief help
@@ -343,3 +344,6 @@ nnoremap <leader>o :InstantMarkdownPreview<CR>
 
 " Closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.ejs"
+
+" Javascript
+let g:javascript_plugin_flow = 1
