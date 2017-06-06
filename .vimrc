@@ -10,6 +10,7 @@ call vundle#begin()
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'w0rp/ale' "linter
 Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av
 Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
 Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p, toggle include path: ctrl-d
@@ -17,8 +18,6 @@ Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
 Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
-Plugin 'scrooloose/syntastic' "eslint. key: <leader>ll <leader>lp
-Plugin 'mtscout6/syntastic-local-eslint.vim' "Use project specific eslint
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&\=. key: Ina, a|, in'
 Plugin 'edkolev/tmuxline.vim' "airline for tmux
 Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
@@ -295,17 +294,16 @@ let g:UltiSnipsExpandTrigger="<C-c>"
 let g:UltiSnipsJumpForwardTrigger="<C-c>"
 let g:UltiSnipsJumpBackwardTrigger="<C-x>"
 
-" Syntastic
-" set checker for filetype:
-" https://github.com/vim-syntastic/syntastic#faqcheckers
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-nnoremap <leader>ll :lnext<CR>
-nnoremap <leader>lp :lprev<CR>
+" Ale
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+let g:ale_sign_column_always = 1
+let g:ale_set_quickfix = 1
+let g:ale_open_list = 1
+let g:ale_lint_on_text_changed = 'never'
+nmap <silent> <leader>lp <Plug>(ale_previous_wrap)
+nmap <silent> <leader>ll <Plug>(ale_next_wrap)
 
 " Gitgutter
 nmap <leader>hh <Plug>GitGutterNextHunk
