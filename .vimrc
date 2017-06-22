@@ -113,7 +113,7 @@ set scrolloff=5
 set history=200 "remember last commands
 " use gf to open files
 set path=**
-set suffixesadd=.js,.html,.css,.json,.md,.apib
+set suffixesadd=.js,.html,.css,.json,.md,.apib,.isml
 " open diffsplit vertically
 set diffopt=filler,vertical
 
@@ -165,6 +165,7 @@ nnoremap <leader>dw :%s/\s\+$//e<CR>
 autocmd BufRead,BufNewFile *.apib set filetype=markdown
 autocmd BufRead,BufNewFile *.scss set filetype=scss.css
 autocmd BufRead,BufNewFile *.ejs set filetype=html
+autocmd BufRead,BufNewFile *.isml set filetype=xml
 autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
 
 " Load manpages with :Man
