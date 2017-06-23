@@ -166,6 +166,7 @@ autocmd BufRead,BufNewFile *.apib set filetype=markdown
 autocmd BufRead,BufNewFile *.scss set filetype=scss.css
 autocmd BufRead,BufNewFile *.ejs set filetype=html
 autocmd BufRead,BufNewFile *.isml set filetype=xml
+autocmd BufRead,BufNewFile *.ds set filetype=javascript
 autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
 
 " Load manpages with :Man
