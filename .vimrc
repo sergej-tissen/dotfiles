@@ -207,7 +207,7 @@ let g:ctrlp_custom_ignore = {
       \ 'file': '\.exe$\|\.so$|\.swp$'
       \ }
 " Ignore files in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " search only filename, not the path
 " let g:ctrlp_by_filename = 1
 " index all files
