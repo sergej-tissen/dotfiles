@@ -13,6 +13,7 @@ alias ....='cd ../../../'                   # Go back 3 directory levels
 alias .....='cd ../../../../'               # Go back 4 directory levels
 alias c='clear'                             # c: Clear terminal display
 alias ag='ag --hidden'                      # include dotfiles
+alias f='find . -name'                      # search for files in current folder by name
 alias vi='vim'
 alias iv='vim'
 cd() { builtin cd "$@"; ls -l; }               # Always list directory contents upon 'cd'
