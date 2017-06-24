@@ -21,10 +21,12 @@
   col = checkout -
   com = checkout master
   df = !clear && git diff --word-diff=color
+  f = fetch
   gp = grep -n --heading --break
   lg = !clear && git log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%S'
   mf = merge --ff-only
   mt = merge --no-ff
+  p = pull
   qmf = "!git checkout $1;git mf @{-1}"
   qmt = "!git checkout $1;git mt @{-1}"
   s = status --short --branch
@@ -43,6 +45,6 @@
 [diff]
   algorithm = histogram
 [rerere]
-	enabled = true
+  enabled = true
 [credential]
-	helper = cache --timeout 36000
+  helper = cache --timeout 36000
