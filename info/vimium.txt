@@ -4,10 +4,6 @@ map L nextTab
 map J goBack
 map K goForward
 
-#Custom search engines
-j: https://developer.mozilla.org/de/search?q=%s MDN
-m: https://www.google.com/maps?q=%s Google maps
-
 #Characters used for link hints
 sadfjklewcmpgh;
 
