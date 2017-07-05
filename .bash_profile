@@ -14,6 +14,7 @@ alias .....='cd ../../../../'               # Go back 4 directory levels
 alias c='clear'                             # c: Clear terminal display
 alias ag='ag --hidden'                      # include dotfiles
 alias f='find . -name'                      # search for files in current folder by name
+alias fci='find . -iname'                    # search for files in current folder case insensitive
 alias vi='vim'
 alias iv='vim'
 cd() { builtin cd "$@"; ls -l; }               # Always list directory contents upon 'cd'
@@ -23,6 +24,7 @@ alias tmka='tmux kill-session -a && tmux kill-session && tmux ls'
 alias tma='tmux a'
 alias tml='tmux ls'
 alias tmux="TERM=screen-256color-bce tmux -2"
+
 tme () {
   folderName=${PWD##*/}
   if (tmux has-session -t "${folderName}"); then

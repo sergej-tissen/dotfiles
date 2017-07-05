@@ -299,6 +299,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-x>"
 " Ale
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'xml': [],
 \}
 let g:ale_sign_column_always = 1
 let g:ale_set_quickfix = 1
