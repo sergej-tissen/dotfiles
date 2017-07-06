@@ -8,7 +8,7 @@
 - [Spectacle](https://www.spectacleapp.com)
   - CMD+CTRL+HJKLYUNMIO'
 - [Alfred](https://www.alfredapp.com)
-  - MDN (j), Leo (t), Google (g)
+  - MDN (js), Leo (t), Google (g), Maps (m), Gmail (gm)
   - Ctrl+Return (Search with default web search)
 - [f.lux](https://justgetflux.com)
 - Postman
