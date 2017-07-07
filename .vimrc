@@ -11,7 +11,7 @@ call vundle#begin()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'w0rp/ale' "linter
-Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av. -G filetype searchword
+Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av. -G filetype, -C show 2 lines context, -i ignore-case, -s case-sensitive ./sub search in subfolder
 Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
 Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p, toggle include path: ctrl-d
 Plugin 'tmhedberg/matchit' " % for tags
