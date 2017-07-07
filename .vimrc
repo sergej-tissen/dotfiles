@@ -30,7 +30,9 @@ Plugin 'tpope/vim-commentary' "comment, uncomment lines key: gc gcc
 Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion
 Plugin 'isRuslan/vim-es6' "es6 snippets
 Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
-Plugin 'tpope/vim-fugitive' "Git support
+" fugitive: Git support. command :Git command % ( % = current file), :Gblame, :Gdiff, :Gwrite (git add %), :Gread (git checkout %), :Gremove, :Gmove /project-root
+" :GStatus - (add, remove file), p (patch), <Enter> (show file), C (commit)
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter' "show git status. key: <leader>hh hk, hp preview hunk, hs stage hunk, hu undo hunk
 Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
 Plugin 'nathanaelkane/vim-indent-guides' "display indent levels. key: toggle <leader> ig
