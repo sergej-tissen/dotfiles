@@ -31,7 +31,7 @@ Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion
 Plugin 'isRuslan/vim-es6' "es6 snippets
 Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 Plugin 'tpope/vim-fugitive' "Git support
-Plugin 'airblade/vim-gitgutter' "show git status. new Text Object: c, key: <leader>hh <leader> hk
+Plugin 'airblade/vim-gitgutter' "show git status. key: <leader>hh hk, hp preview hunk, hs stage hunk, hu undo hunk
 Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
 Plugin 'nathanaelkane/vim-indent-guides' "display indent levels. key: toggle <leader> ig
 Plugin 'suan/vim-instant-markdown' "Run '[sudo] npm -g install instant-markdown-d'. key: toggle <leader>o
