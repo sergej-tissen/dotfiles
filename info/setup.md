@@ -13,6 +13,7 @@
 - [f.lux](https://justgetflux.com)
 - Postman
 - Docker
+- [AppCleaner](https://freemacsoft.net/appcleaner/)
 
 # Brew
 
