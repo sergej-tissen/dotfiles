@@ -348,7 +348,7 @@ let g:instant_markdown_autostart = 0
 nnoremap <leader>o :InstantMarkdownPreview<CR>
 
 " Closetag
-let g:closetag_filenames = "*.html,*.xhtml,*.ejs"
+let g:closetag_filenames = "*.html,*.xhtml,*.ejs,*.xml,*.isml"
 
 " Javascript
 let g:javascript_plugin_flow = 1
