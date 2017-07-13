@@ -305,10 +305,10 @@ let g:ale_linters = {
 \   'xml': [],
 \}
 let g:ale_sign_column_always = 1
-let g:ale_set_quickfix = 1
-let g:ale_open_list = 1
+" let g:ale_set_quickfix = 1
+" let g:ale_open_list = 1
 let g:ale_lint_on_text_changed = 'never'
-nmap <silent> <leader>lp <Plug>(ale_previous_wrap)
+nmap <silent> <leader>lk <Plug>(ale_previous_wrap)
 nmap <silent> <leader>ll <Plug>(ale_next_wrap)
 
 " Gitgutter
