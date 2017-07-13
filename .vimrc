@@ -45,6 +45,7 @@ Plugin 'kana/vim-textobj-entire' "Object for entire file. key: ae ie (omit empty
 Plugin 'kana/vim-textobj-indent' "Object for indentation level. key: ai (with sub indents), aI (only current indent level)
 Plugin 'kana/vim-textobj-user'
 Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
+Plugin 'tpope/vim-unimpaired' "Navigate quickfix window. key [q ]q :cnext, :cprevious, [Q ]Q :cfirst, :clast, [b ]b Buffer
 Plugin 'benmills/vimux' "execute tmux command from vim
 Plugin 'Valloric/YouCompleteMe' "Code completion
 Plugin 'vim-scripts/ZoomWin' "Zoom Pane in,out. key: Ctrl-w o
