@@ -31,8 +31,10 @@ Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion
 Plugin 'isRuslan/vim-es6' "es6 snippets
 Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 " fugitive: Git support. command :Git command % ( % = current file), :Gblame, :Gdiff, :Gwrite (git add %),
-" :Gread (git checkout %), :Gremove, :Gmove /project-root, za open/close fold, :Gedit browse commits, :Glog -10 show log for current file
-" :GStatus - (add, remove file), p (patch), <Enter> (show file), C (commit)
+" :Gread (git checkout %), :Gremove, :Gmove /project-root, za open/close fold,
+" :Gedit browse commits, C back to commit view, Enter open diff mode, a show tree as link
+" :Glog -10 show log for current file, :Glog -- % show commits for current file, :Glog -- load all commits in quickfix window
+" :GStatus - (add, remove file), p (patch), <Enter> (show file), C (commit), C-n C-p jump to next file
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter' "show git status. key: <leader>hh hk, hp preview hunk, hs stage hunk, hu undo hunk
 Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
