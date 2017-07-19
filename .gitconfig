@@ -29,6 +29,7 @@
   mf = merge --ff-only
   mt = merge --no-ff
   p = pull
+  prb = pull --rebase
   qmf = "!git checkout $1;git mf @{-1}"
   qmt = "!git checkout $1;git mt @{-1}"
   s = status --short --branch
