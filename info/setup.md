@@ -20,7 +20,7 @@
 - bash-completion
 - the_silver_searcher
 - git (if not linked: brew link git)
-- vim (brew install vim --override-system-vim)
+- vim (brew install vim --override-system-vim --with-python3)
 - tmux
 - reattach-to-user-namespace
 - node
