@@ -212,7 +212,7 @@ let g:ctrlp_working_path_mode = 'ra'
 " CtrlP ignore patterns
 let g:ctrlp_custom_ignore = {
       \ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
-      \ 'file': '\.exe$\|\.so$|\.swp$'
+      \ 'file': '\v\.(exe|so|dll|swp|class)$',
       \ }
 " Ignore files in .gitignore
 " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
