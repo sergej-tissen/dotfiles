@@ -14,6 +14,7 @@ Plugin 'w0rp/ale' "linter
 Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av. -G filetype, -C show 2 lines context, -i ignore-case, -s case-sensitive ./sub search in subfolder
 Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
 Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p, toggle include path: ctrl-d
+Plugin 'sjl/gundo.vim' "show undo tree. key: <leader>u
 Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
 Plugin 'junegunn/rainbow_parentheses.vim'
@@ -355,3 +356,6 @@ let g:closetag_filenames = "*.html,*.xhtml,*.ejs,*.xml,*.isml"
 
 " Javascript
 let g:javascript_plugin_flow = 1
+
+" Gundo
+nnoremap <leader>u :GundoToggle<CR>
