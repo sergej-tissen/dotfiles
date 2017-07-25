@@ -44,6 +44,7 @@ Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'kshenoy/vim-signature' "show marks. key: remove mark: dm[mark], delete all marks in buffer: m<space>
 Plugin 'honza/vim-snippets' "snippets
 Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds Visual Mode: S
+Plugin 'godlygeek/tabular' "align by a pattern. :Tab /x (x is regex by which to align. ie. = or , or |)
 Plugin 'kana/vim-textobj-entire' "Object for entire file. key: ae ie (omit empty lines at start or end)
 Plugin 'kana/vim-textobj-indent' "Object for indentation level. key: ai (with sub indents), aI (only current indent level)
 Plugin 'kana/vim-textobj-user'
@@ -56,7 +57,6 @@ Plugin 'vim-scripts/ZoomWin' "Zoom Pane in,out. key: Ctrl-w o
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'honza/dockerfile.vim'
 Plugin 'elzr/vim-json'
