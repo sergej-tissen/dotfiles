@@ -14,6 +14,11 @@
 - Docker
 - [AppCleaner](https://freemacsoft.net/appcleaner/)
 - [SDKMAN](http://sdkman.io/install.html)
+  - sdk install java
+  - sdk install scala
+  - sdk install gradle
+- IntelliJ IDEA
+  - import settings: intellij-settings.jar
 
 # Brew
 
@@ -21,7 +26,7 @@
 - bash-completion
 - the_silver_searcher
 - git (if not linked: brew link git)
-- vim (brew install vim --override-system-vim --with-python3)
+- vim (brew install vim --override-system-vim)
 - tmux
 - reattach-to-user-namespace
 - node
@@ -30,15 +35,14 @@
     - sudo npm install -g n
     - sudo n stable
 - awscli
-- java (brew cask install java)
 - fzf (run this after: /usr/local/opt/fzf/install)
 
 # Config
 
 - [Keyboard Setting: Caps Lock -> Strg & Esc](https://github.com/wwwjfy/Karabiner-Elements/releases)
   - copy karabiner.json to ~/.config/karabiner/karabiner.json
-- Solarized Terminal (myprofile.dark.terminal)
 - clone & install dotfiles
+- Solarized Terminal (myprofile.dark.terminal)
 - Vundle Plugin Manager
   - Install Vundle Plugins (:PluginInstall)
   - Install YCM (cd ~/.vim/bundle/YouCompleteMe ./install.py --tern-completer)
@@ -52,13 +56,11 @@
   - JSON Formatter
   - LastPass
   - Markdown Preview
-  - Node Inspector Manager
   - Pocket
   - Postman Interceptor
   - uBlock Origin
   - Vimium
     - use vimium.txt for config
-  - Web Developer
 
 # Vim from source
 

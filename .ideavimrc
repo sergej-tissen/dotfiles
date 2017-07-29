@@ -1,0 +1,38 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" IdeaVim
+" AceJump
+" Press `g` to activate Line Mode
+map <Space>j :action AceLineAction<CR>
+map <Space>k :action AceLineAction<CR>
+map / :action AceAction<CR>
+map <Space>w :action AceAction<CR>
+map <Space>e :action AceAction<CR>
+map <Space>b :action AceAction<CR>
+map <Space>ge :action AceAction<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set clipboard=unnamed "copy to system clipboard
+set gdefault "substitue globally on lines %s/a/b/ instead %s/a/b/g
+set surround "vim-surround plugin
+" Y behaves like C and D
+noremap Y y$
+" Reload .ideavimrc
+nnoremap <Space>vs :source ~/.ideavimrc<CR>
+
+" Move between Panes
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <Space>q :close<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => IntelliJ Actions
+" List of Actions: https://centic9.github.io/IntelliJ-Action-IDs/
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap n :action FindNext<CR>
+nnoremap N :action FindPrevious<CR>
