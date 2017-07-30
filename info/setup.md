@@ -13,6 +13,7 @@
 - Postman
 - Docker
 - [AppCleaner](https://freemacsoft.net/appcleaner/)
+- [SDKMAN](http://sdkman.io/install.html)
 
 # Brew
 
