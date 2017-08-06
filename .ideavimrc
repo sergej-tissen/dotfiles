@@ -18,6 +18,8 @@ map <Space>ge :action AceAction<CR>
 set clipboard=unnamed "copy to system clipboard
 set gdefault "substitue globally on lines %s/a/b/ instead %s/a/b/g
 set surround "vim-surround plugin
+" 5 rows offset when scrolling
+set scrolloff=5
 " Y behaves like C and D
 noremap Y y$
 " Reload .ideavimrc
