@@ -3,14 +3,11 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " IdeaVim
 " AceJump
-" Press `g` to activate Line Mode
 map <Space>j :action AceLineAction<CR>
 map <Space>k :action AceLineAction<CR>
-map / :action AceAction<CR>
 map <Space>w :action AceAction<CR>
 map <Space>e :action AceAction<CR>
 map <Space>b :action AceAction<CR>
-map <Space>ge :action AceAction<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General

@@ -18,6 +18,9 @@
   - sdk install scala
   - sdk install gradle
 - IntelliJ IDEA
+  - Plugins
+    - IdeaVim
+    - Ace Jump (/, <Space>w,e,b,j,k)
   - import settings: intellij-settings.jar
 
 # Brew
