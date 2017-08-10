@@ -10,7 +10,7 @@ call vundle#begin()
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'w0rp/ale' "linter
+Plugin 'w0rp/ale' "linter, key: <leader>ll lk
 Plugin 'mileszs/ack.vim' "search in all files, key: <leader>aa, <leader>aw, <leader>av. -G filetype, -C show 2 lines context, -i ignore-case, -s case-sensitive ./sub search in subfolder
 Plugin 'jiangmiao/auto-pairs' "autocomplete (''{...
 Plugin 'ctrlpvim/ctrlp.vim' "fuzzy find file. key: ctrl-p, buffer: <leader>p, toggle include path: ctrl-d
