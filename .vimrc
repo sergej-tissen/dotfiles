@@ -38,9 +38,6 @@ Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 " :GStatus - (add, remove file), p (patch), <Enter> (show file), C (commit), C-n C-p jump to next file
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter' "show git status. key: <leader>hh hk, hp preview hunk, hs stage hunk, hu undo hunk
-Plugin 'takac/vim-hardtime' "disable arrow keys and repeat hjkl only once. key: <leader>x
-Plugin 'nathanaelkane/vim-indent-guides' "display indent levels. key: toggle <leader> ig
-Plugin 'suan/vim-instant-markdown' "Run '[sudo] npm -g install instant-markdown-d'. key: toggle <leader>o
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'kshenoy/vim-signature' "show marks. key: remove mark: dm[mark], delete all marks in buffer: m<space>
 Plugin 'honza/vim-snippets' "snippets
@@ -53,16 +50,13 @@ Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 Plugin 'tpope/vim-unimpaired' "Navigate quickfix window. key []q :cnext, :cprevious, Q :cfirst, :clast, b Buffer, e exchange x lines
 Plugin 'benmills/vimux' "execute tmux command from vim
 Plugin 'Valloric/YouCompleteMe' "Code completion
-Plugin 'vim-scripts/ZoomWin' "Zoom Pane in,out. key: Ctrl-w o
 " Language Plugins
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
-Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'honza/dockerfile.vim'
 Plugin 'elzr/vim-json'
 Plugin 'stephpy/vim-yaml'
-Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 " Brief help
@@ -169,15 +163,11 @@ nnoremap <leader>dw :%s/\s\+$//e<CR>
 " => Autocommands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-autocmd BufRead,BufNewFile *.apib set filetype=markdown
 autocmd BufRead,BufNewFile *.scss set filetype=scss.css
 autocmd BufRead,BufNewFile *.ejs set filetype=html
 autocmd BufRead,BufNewFile *.isml set filetype=xml
 autocmd BufRead,BufNewFile *.ds set filetype=javascript
 autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
-
-" Load manpages with :Man
-runtime! ftplugin/man.vim
 
 " goto last position when file was left
 autocmd  BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
@@ -187,6 +177,9 @@ autocmd! bufwritepost .vimrc source %
 
 " Don't add the comment prefix when I hit enter or o/O on a comment line.
 autocmd FileType * setlocal formatoptions-=r formatoptions-=o
+
+" Load manpages with :Man
+runtime! ftplugin/man.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin settings
@@ -320,19 +313,7 @@ nmap <silent> <leader>ll <Plug>(ale_next_wrap)
 nmap <leader>hh <Plug>GitGutterNextHunk
 nmap <leader>hk <Plug>GitGutterPrevHunk
 
-" Argwrap
-nnoremap <silent> <leader>gw :ArgWrap<CR>
-
-" Hardtime
-" let g:hardtime_default_on = 1
-let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
-let g:hardtime_maxcount = 2
-let g:hardtime_showmsg = 1
-let g:hardtime_ignore_quickfix = 1
-let g:hardtime_allow_different_key = 1
-nnoremap <Leader>x :HardTimeToggle<CR>
-
-" Markdown
+" vim-markdown
 let g:vim_markdown_folding_disabled = 1
 
 " Rainbow Parentheses
@@ -342,14 +323,6 @@ augroup rainbow_lisp
   autocmd!
   autocmd FileType javascript,json,css RainbowParentheses
 augroup END
-
-" Indent Guides
-let g:indent_guides_start_level=2
-let g:indent_guides_guide_size=1
-
-" Instant Markdown
-let g:instant_markdown_autostart = 0
-nnoremap <leader>o :InstantMarkdownPreview<CR>
 
 " Closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.ejs,*.xml,*.isml"
