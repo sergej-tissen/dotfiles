@@ -16,6 +16,7 @@
 - [SDKMAN](http://sdkman.io/install.html)
   - sdk install java
   - sdk install scala
+  - sdk install groovy
   - sdk install gradle
 - IntelliJ IDEA
   - Plugins
@@ -64,18 +65,3 @@
   - uBlock Origin
   - Vimium
     - use vimium.txt for config
-
-# Vim from source
-
-https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source
-
-```
-./configure --with-features=huge \
-            --enable-multibyte \
-            --enable-rubyinterp \
-            --enable-pythoninterp \
-            --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
-            --enable-perlinterp \
-            --enable-luainterp \
-            --enable-cscope --prefix=/usr --enable-gui=gtk2 --with-x
-```
