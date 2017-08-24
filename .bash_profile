@@ -4,9 +4,6 @@ alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ls='ls -GFh'
 alias l='ls -FGlAhp'                        # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
-alias cdd='cd ~/dotfiles'
-alias cdw='cd ~/workspace'
-alias cdc='cd ~/cc-workspace'
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
 alias ....='cd ../../../'                   # Go back 3 directory levels
@@ -17,7 +14,12 @@ alias f='find . -name'                      # search for files in current folder
 alias fci='find . -iname'                   # search for files in current folder case insensitive
 alias vi='vim'
 alias iv='vim'
+# cd enhancements
 cd() { builtin cd "$@"; ls -l; }            # Always list directory contents upon 'cd'
+alias cdd='cd ~/dotfiles'
+alias cdw='cd ~/workspace'
+alias cdp='cd $(git rev-parse --show-toplevel)' # goto git project root
+alias cdl='cd -'                            # goto last folder
 
 # Tmux
 alias tmk='tmux kill-session -t ${PWD##*/} && tmux ls'
