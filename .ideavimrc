@@ -4,11 +4,6 @@
 " IdeaVim
 " AceJump
 map / :action AceAction<CR>
-map <Space>j :action AceLineAction<CR>
-map <Space>k :action AceLineAction<CR>
-map <Space>w :action AceAction<CR>
-map <Space>e :action AceAction<CR>
-map <Space>b :action AceAction<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
