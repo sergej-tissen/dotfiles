@@ -43,7 +43,7 @@
 
 # Config
 
-- [Keyboard Setting: Caps Lock -> Strg & Esc](https://github.com/wwwjfy/Karabiner-Elements/releases)
+- [Keyboard Setting: Caps Lock -> Strg & Esc](https://github.com/tekezo/Karabiner-Elements)
   - copy karabiner.json to ~/.config/karabiner/karabiner.json
 - clone & install dotfiles
 - Solarized Terminal (myprofile.dark.terminal)
