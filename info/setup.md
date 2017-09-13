@@ -12,6 +12,7 @@
   - Ctrl+Return (Search with default web search)
 - Postman
 - Docker
+- AutoMute
 - [AppCleaner](https://freemacsoft.net/appcleaner/)
 - [SDKMAN](http://sdkman.io/install.html)
   - sdk install java
@@ -53,8 +54,10 @@
 - Tmux Plugin Manager
   - Install Tmux Plugins (prefix + I)
 - Docker CLI Autocomplete
-  - curl -XGET https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker > `brew --prefix`/etc/bash_completion.d/docker
-  - curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose -o usr/local/etc/bash_completion.d/docker-compose
+  - cd /usr/local/etc/bash_completion.d
+  - ln -s /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
+  - ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion
+  - ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion
 - Chrome Plugins
   - Adblock Plus
   - JSON Formatter
