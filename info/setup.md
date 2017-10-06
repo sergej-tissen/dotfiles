@@ -40,6 +40,8 @@
     - sudo npm install -g n
     - sudo n stable
 - awscli
+- kubectl
+- kubernetes-helm
 - fzf (run this after: /usr/local/opt/fzf/install)
 
 # Config
