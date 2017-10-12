@@ -26,7 +26,7 @@ alias tmk='tmux kill-session -t ${PWD##*/} && tmux ls'
 alias tmka='tmux kill-session -a && tmux kill-session && tmux ls'
 alias tma='tmux a'
 alias tml='tmux ls'
-tme () {
+tmd () {
   folderName=${PWD##*/}
   if (tmux has-session -t "${folderName}"); then
     tmux -2 attach -t "${folderName}"
@@ -39,6 +39,17 @@ tme () {
     tmux split-window -h -p 45
     tmux select-pane -t 1
     tmux send-keys 'vim' Enter
+    tmux -2 attach-session -t "${folderName}"
+  fi
+}
+tms () {
+  folderName=${PWD##*/}
+  if (tmux has-session -t "${folderName}"); then
+    tmux -2 attach -t "${folderName}"
+  else
+    tmux new -s "${folderName}" -n dev -d
+    tmux split-window -v
+    tmux select-pane -t 1
     tmux -2 attach-session -t "${folderName}"
   fi
 }
