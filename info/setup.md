@@ -71,3 +71,4 @@
   - uBlock Origin
   - Vimium
     - use vimium.txt for config
+  - Tab Number
