@@ -23,6 +23,7 @@
   - Plugins
     - IdeaVim
     - Ace Jump (/, <Space>w,e,b,j,k)
+    - CodeGlance
   - import settings: intellij-settings.jar
 
 # Brew
