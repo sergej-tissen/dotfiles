@@ -57,6 +57,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'honza/dockerfile.vim'
 Plugin 'elzr/vim-json'
 Plugin 'stephpy/vim-yaml'
+Plugin 'hashivim/vim-hashicorp-tools'
 
 call vundle#end()
 " Brief help
@@ -165,6 +166,7 @@ nnoremap <leader>dw :%s/\s\+$//e<CR>
 
 autocmd BufRead,BufNewFile *.scss set filetype=scss.css
 autocmd BufRead,BufNewFile *.ejs set filetype=html
+autocmd BufRead,BufNewFile *.tfstate* set filetype=json
 autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab "use tab for makefile
 
 " goto last position when file was left
@@ -323,7 +325,7 @@ augroup rainbow_lisp
 augroup END
 
 " Closetag
-let g:closetag_filenames = "*.html,*.xhtml,*.ejs,*.xml,*.isml"
+let g:closetag_filenames = "*.html,*.xhtml,*.ejs,*.xml"
 
 " Javascript
 let g:javascript_plugin_flow = 1

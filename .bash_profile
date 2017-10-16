@@ -48,7 +48,7 @@ tms () {
     tmux -2 attach -t "${folderName}"
   else
     tmux new -s "${folderName}" -n dev -d
-    tmux split-window -v
+    tmux split-window -v -p 30
     tmux select-pane -t 1
     tmux -2 attach-session -t "${folderName}"
   fi
