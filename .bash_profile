@@ -1,6 +1,7 @@
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+alias rm='rm -rf'                           # always delete recursive
 alias ls='ls -GFh'
 alias l='ls -FGlAhp'                        # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
