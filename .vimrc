@@ -115,7 +115,7 @@ set scrolloff=5
 set history=200 "remember last commands
 " use gf to open files
 set path=**
-set suffixesadd=.js,.html,.css,.json,.md,.apib,.isml
+set suffixesadd=.js,.html,.css,.json,.md
 " open diffsplit vertically
 set diffopt=filler,vertical
 

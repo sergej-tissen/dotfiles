@@ -4,7 +4,6 @@ set nocompatible
 set wildmode=full
 set wildmenu
 set number
-set relativenumber
 set nobackup
 set nowritebackup
 set noswapfile
@@ -13,8 +12,58 @@ set smartcase
 set incsearch
 set nrformats=
 set cursorline
+set mouse=a "enable mouse support
+set noautochdir "do not switch root dir when opening file
+set nrformats= "use always base 10 numbers"
+set splitbelow "new splits below current
+set splitright "new splits right to the current
+set virtualedit=block "move in visual block mode beyound eol"
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab "Tab is 2 spaces
+set backspace=indent,eol,start "sane backspace
+set ff=unix
+set encoding=utf8
+set ttimeoutlen=0 "no delay when <esc> pressed
+set dy+=lastline "show last line if it's too long
+set linebreak "do not break in the middle of a word
+set diffopt=filler,vertical
+set list "show tab and trailing space symbols
+set listchars=tab:▸\ ,trail:·
 highlight CursorLine cterm=none ctermbg=237
 syntax on
 filetype plugin on
-" Automatic reloading of .vimrc
-autocmd! bufwritepost .vimrc_minimal source %
+" Don't add the comment prefix when I hit enter or o/O on a comment line.
+autocmd FileType * setlocal formatoptions-=r formatoptions-=o
+" goto last position when file was left
+autocmd  BufReadPost  *   if line("'\"") > 0 && line("'\"") <= line("$") | exe 'norm! g`"' | endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = " "
+" Do not enter  Ex Mode
+nnoremap Q <nop>
+nmap j gj
+nmap k gk
+nmap $ g$
+nmap 0 g0
+nmap ^ g^
+vmap j gj
+vmap k gk
+vmap $ g$
+vmap 0 g0
+vmap ^ g^
+inoremap <c-s> <Esc>:w<CR>
+nnoremap <c-s> :w<CR>
+nnoremap <c-q> :q<cr>
+" Navigate Buffers
+nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+nnoremap <s-Tab> <c-^>
+" Y behaves like C and D
+noremap Y y$
+" goto end of line in insert mode
+inoremap <C-e> <C-o>$
+" replace in file / project
+nnoremap <leader>mi :%s///c<left><left>
+nnoremap <leader>ma :cdo s///c \| up<left><left><left><left><left><left><left>
+" remove trailing whitespace
+nnoremap <leader>dw :%s/\s\+$//e<CR>
