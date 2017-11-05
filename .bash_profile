@@ -3,7 +3,7 @@ alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias rm='rm -rf'                           # always delete recursive
 alias ls='ls -GFh'
-alias ll='ls -FGlAhp'                        # Preferred 'ls' implementation
+alias ll='ls -FGlAh'                        # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
@@ -76,7 +76,7 @@ eval "`npm completion`"
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\[\033[31m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[m\]\n> "
+export PS1="\[\033[31m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[m\]\n\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR=vim
