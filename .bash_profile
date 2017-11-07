@@ -12,6 +12,7 @@ alias .....='cd ../../../../'               # Go back 4 directory levels
 alias c='clear'                             # c: Clear terminal display
 alias ag='ag --hidden'                      # include dotfiles
 alias f='find . -name'                      # search for files in current folder by name
+alias ssh='ssh -oStrictHostKeyChecking=no'  # don't check known_hosts
 alias fci='find . -iname'                   # search for files in current folder case insensitive
 alias vi='vim'
 alias iv='vim'
