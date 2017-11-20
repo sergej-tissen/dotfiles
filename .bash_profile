@@ -9,7 +9,6 @@ alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
 alias ....='cd ../../../'                   # Go back 3 directory levels
 alias .....='cd ../../../../'               # Go back 4 directory levels
-alias c='clear'                             # c: Clear terminal display
 alias ag='ag --hidden'                      # include dotfiles
 alias f='find . -name'                      # search for files in current folder by name
 alias ssh='ssh -oStrictHostKeyChecking=no'  # don't check known_hosts
@@ -22,39 +21,6 @@ alias cdd='cd ~/dotfiles'
 alias cdw='cd ~/workspace'
 alias cdp='cd $(git rev-parse --show-toplevel)' # goto git project root
 alias cdl='cd -'                            # goto last folder
-
-# Tmux
-alias tmk='tmux kill-session -t ${PWD##*/} && tmux ls'
-alias tmka='tmux kill-session -a && tmux kill-session && tmux ls'
-alias tma='tmux a'
-alias tml='tmux ls'
-tmd () {
-  folderName=${PWD##*/}
-  if (tmux has-session -t "${folderName}"); then
-    tmux -2 attach -t "${folderName}"
-  else
-    tmux new -s "${folderName}" -n dev -d
-    tmux new-window -t "${folderName}:2" -n "misc"
-    tmux split-window -h
-    tmux select-pane -t 1
-    tmux select-window -t "${folderName}:1"
-    tmux split-window -h -p 45
-    tmux select-pane -t 1
-    tmux send-keys 'vim' Enter
-    tmux -2 attach-session -t "${folderName}"
-  fi
-}
-tms () {
-  folderName=${PWD##*/}
-  if (tmux has-session -t "${folderName}"); then
-    tmux -2 attach -t "${folderName}"
-  else
-    tmux new -s "${folderName}" -n dev -d
-    tmux split-window -v -p 30
-    tmux select-pane -t 1
-    tmux -2 attach-session -t "${folderName}"
-  fi
-}
 
 bind -r '\C-s'
 stty -ixon
@@ -89,3 +55,5 @@ export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/s
 # sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

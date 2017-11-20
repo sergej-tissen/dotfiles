@@ -20,7 +20,6 @@ Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
 Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&\=. key: Ina, a|, in'
-Plugin 'edkolev/tmuxline.vim' "airline for tmux
 Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'vim-airline/vim-airline' "Statusbar
@@ -46,9 +45,7 @@ Plugin 'godlygeek/tabular' "align by a pattern. :Tab /x (x is regex by which to 
 Plugin 'kana/vim-textobj-entire' "Object for entire file. key: ae ie (omit empty lines at start or end)
 Plugin 'kana/vim-textobj-indent' "Object for indentation level. key: ai (with sub indents), aI (only current indent level)
 Plugin 'kana/vim-textobj-user'
-Plugin 'christoomey/vim-tmux-navigator' "use Ctrl-hjkl to navigate vim and tmux
 Plugin 'tpope/vim-unimpaired' "Navigate quickfix window. key []q :cnext, :cprevious, Q :cfirst, :clast, b Buffer, e exchange x lines
-Plugin 'benmills/vimux' "execute tmux command from vim
 Plugin 'Valloric/YouCompleteMe' "Code completion
 " Language Plugins
 Plugin 'pangloss/vim-javascript'
@@ -71,11 +68,6 @@ call vundle#end()
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a "enable mouse support
-" resize splits with mouse
-if &term =~ '^screen'
-  " tmux knows the extended mouse mode
-  set ttymouse=xterm2
-endif
 set clipboard=unnamed "copy to system clipboard
 set noautochdir "do not switch root dir when opening file
 set nrformats= "use always base 10 numbers"
@@ -245,7 +237,6 @@ let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#buffers_label = ''
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-let airline#extensions#tmuxline#color_template = 'visual'
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
@@ -267,21 +258,6 @@ let g:airline_symbols.branch = '⌥'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
-
-" Vim-Tmux-Navigator
-let g:tmux_navigator_save_on_switch = 2
-
-" Tmuxline
-let g:tmuxline_powerline_separators = 0
-let g:tmuxline_preset = {
-      \'a'    : '#S',
-      \'b'    : '',
-      \'c'    : '',
-      \'win'  : '#I #W',
-      \'cwin' : '#I #W',
-      \'x'    : '',
-      \'y'    : '#W',
-      \'z'    : '#H'}
 
 " Ack.vim
 if executable('ag')

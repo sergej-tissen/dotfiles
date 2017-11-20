@@ -24,7 +24,7 @@
   dfs = !clear && git diff --word-diff=color --staged
   f = fetch
   gp = grep -n --heading --break
-  lg = !clear && git log --all --graph --pretty='format:%C(auto)%h%d %s  %C(dim magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%M'
+  lg = !clear && git log --all --graph --pretty='format:%C(auto)%h%d %s  %C(magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%M'
   lf = !git lg --name-only
   mf = merge --ff-only
   mt = merge --no-ff

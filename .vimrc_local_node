@@ -1,4 +1,0 @@
-autocmd BufLeave,FocusLost * silent! wall
-
-map <leader>ir :w <bar> :call VimuxRunCommand('clear && node ' .  bufname('%'))<cr>
-map <leader>iw :w <bar> :call VimuxRunCommand('clear && ./node_modules/.bin/nodemon -q ' .  bufname('%'))<cr>

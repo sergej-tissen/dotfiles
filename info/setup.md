@@ -33,7 +33,6 @@
 - the_silver_searcher
 - git (if not linked: brew link git)
 - vim (brew install vim --override-system-vim)
-- tmux
 - reattach-to-user-namespace
 - node
   - upgrade
@@ -54,8 +53,6 @@
 - Vundle Plugin Manager
   - Install Vundle Plugins (:PluginInstall)
   - Install YCM (cd ~/.vim/bundle/YouCompleteMe ./install.py --tern-completer)
-- Tmux Plugin Manager
-  - Install Tmux Plugins (prefix + I)
 - Docker CLI Autocomplete
   - cd /usr/local/etc/bash_completion.d
   - ln -s /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion
