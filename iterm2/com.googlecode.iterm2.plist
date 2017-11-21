@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AboutToPasteTabsWithCancel</key>
+	<true/>
+	<key>AboutToPasteTabsWithCancel_selection</key>
+	<integer>2</integer>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -35,10 +39,24 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x6a-0x80000</key>
+		<dict>
+			<key>Action</key>
+			<integer>8</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x6b-0x40000</key>
 		<dict>
 			<key>Action</key>
 			<integer>20</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0x6b-0x80000</key>
+		<dict>
+			<key>Action</key>
+			<integer>9</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -112,24 +130,10 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf72c-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>9</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
 		<key>0xf72c-0x20000</key>
 		<dict>
 			<key>Action</key>
 			<integer>9</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72d-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>8</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -198,11 +202,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>184 1133 618 519 -145 1050 1920 1057 </string>
+	<string>184 1133 606 469 -145 1050 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>182 1634 796 473 -145 1050 1920 1057 </string>
+	<string>182 1595 796 473 -145 1050 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1135 1050 640 1057 -145 1050 1920 1057 </string>
+	<string>817 1050 955 1057 -145 1050 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -835,7 +839,7 @@
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
-			<false/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -856,12 +860,16 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
+	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
+	<integer>1</integer>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>FCD153FB-E739-4E5A-9A0C-418C78ECF845</string>
 	<key>NoSyncLastTipTime</key>
-	<real>532812721.50065601</real>
+	<real>532943977.69284099</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -875,6 +883,7 @@
 		<string>000</string>
 		<string>0000</string>
 		<string>0001</string>
+		<string>0002</string>
 	</array>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
@@ -882,6 +891,8 @@
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -926,7 +937,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-20T00:04:56Z</date>
+	<date>2017-11-21T14:51:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -941,6 +952,8 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
