@@ -46,7 +46,6 @@ parse_git_branch() {
 export PS1="\[\033[31m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[m\]\n\$ "
 export CLICOLOR=1
 
-export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR=vim
 export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 
