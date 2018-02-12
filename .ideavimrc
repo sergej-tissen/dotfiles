@@ -16,7 +16,7 @@ set scrolloff=5
 " Y behaves like C and D
 noremap Y y$
 " Reload .ideavimrc
-nnoremap <Space>vs :source ~/.ideavimrc<CR>
+nnoremap <Space>r :source ~/.ideavimrc<CR>
 
 " Move between Panes
 nnoremap <C-j> <C-w>j
