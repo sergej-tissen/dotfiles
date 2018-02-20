@@ -136,9 +136,6 @@ vmap k gk
 vmap $ g$
 vmap 0 g0
 vmap ^ g^
-inoremap <c-s> <Esc>:w<CR>
-nnoremap <c-s> :w<CR>
-nnoremap <c-q> :q<cr>
 " Navigate Buffers
 nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 nnoremap <s-Tab> <c-^>
