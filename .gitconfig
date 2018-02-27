@@ -22,13 +22,13 @@
   com = checkout master
   df = !clear && git diff --word-diff=color
   dfs = !clear && git diff --word-diff=color --staged
-  f = fetch
+  f = fetch --all
   gp = grep -n --heading --break
   lg = !clear && git log --all --graph --pretty='format:%C(auto)%h%d %s  %C(magenta)[%an] (%ad)%C(reset)' --date=format:'%d.%m.%y %H:%M'
   lf = !git lg --name-only
   mf = merge --ff-only
   mt = merge --no-ff
-  p = pull
+  p = pull --all
   pr = pull --rebase
   qmf = "!git checkout $1;git mf @{-1}"
   qmt = "!git checkout $1;git mt @{-1}"
