@@ -4,6 +4,7 @@ ln -sv ~/dotfiles/.bash_profile ~
 ln -sv ~/dotfiles/.vimrc ~
 ln -sv ~/dotfiles/.tern-config ~
 ln -sv ~/dotfiles/.ideavimrc ~
+ln -sv ~/dotfiles/.zshrc ~
 mkdir ~/.vim
 mkdir ~/.vim/.undo
 rm -rf ~/.vim/UltiSnips
