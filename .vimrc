@@ -1,3 +1,8 @@
+" Execute before first usage
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" :PluginInstall
+" cd ~/.vim/bundle/YouCompleteMe && ./install.py --js-completer
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
