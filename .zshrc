@@ -32,6 +32,7 @@ alias cdd='cd ~/dotfiles'
 alias cdw='cd ~/workspace'
 alias cdp='cd $(git rev-parse --show-toplevel)' # goto git project root
 alias cdl='cd -'                            # goto last folder
+alias pip='pip2.7'
 
 function chpwd() {
   ls -a
