@@ -25,7 +25,7 @@ Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
 Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&\=. key: Ina, a|, in'
-Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
+" Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'vim-airline/vim-airline' "Statusbar
 Plugin 'vim-airline/vim-airline-themes' "Theme for airline
@@ -51,7 +51,7 @@ Plugin 'kana/vim-textobj-entire' "Object for entire file. key: ae ie (omit empty
 Plugin 'kana/vim-textobj-indent' "Object for indentation level. key: ai (with sub indents), aI (only current indent level)
 Plugin 'kana/vim-textobj-user'
 Plugin 'tpope/vim-unimpaired' "Navigate quickfix window. key []q :cnext, :cprevious, Q :cfirst, :clast, b Buffer, e exchange x lines
-Plugin 'Valloric/YouCompleteMe' "Code completion
+" Plugin 'Valloric/YouCompleteMe' "Code completion
 " Language Plugins
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
@@ -209,12 +209,12 @@ let g:ctrlp_by_filename = 1
 " index all files
 let g:ctrlp_max_files=0
 
-" YCM
-nnoremap <silent><leader>rf :YcmCompleter GoTo<CR>
-nnoremap <leader>rn :YcmCompleter RefactorRename<Space>
-set completeopt-=preview
-" show autocompletion for css
-let g:ycm_semantic_triggers = {'css': [ 're!^\s{2}', 're!:\s+' ],}
+" " YCM
+" nnoremap <silent><leader>rf :YcmCompleter GoTo<CR>
+" nnoremap <leader>rn :YcmCompleter RefactorRename<Space>
+" set completeopt-=preview
+" " show autocompletion for css
+" let g:ycm_semantic_triggers = {'css': [ 're!^\s{2}', 're!:\s+' ],}
 
 " Easymotion
 let g:EasyMotion_smartcase = 1
@@ -270,10 +270,10 @@ nnoremap <Leader>aa :Ack!<Space>
 nnoremap <Leader>aw :Ack!<Space><C-R><C-W><CR>
 vnoremap <Leader>av y:Ack!<Space>"<C-R>""<CR>
 
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<C-c>"
-let g:UltiSnipsJumpForwardTrigger="<C-c>"
-let g:UltiSnipsJumpBackwardTrigger="<C-x>"
+" " UltiSnips
+" let g:UltiSnipsExpandTrigger="<C-c>"
+" let g:UltiSnipsJumpForwardTrigger="<C-c>"
+" let g:UltiSnipsJumpBackwardTrigger="<C-x>"
 
 " Ale
 let g:ale_linters = {
