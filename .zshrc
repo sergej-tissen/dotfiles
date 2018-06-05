@@ -45,3 +45,4 @@ PATH="$HOME/.local/bin:$HOME/Library/Python/2.7/bin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/sergej/.sdkman"
 [[ -s "/Users/sergej/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sergej/.sdkman/bin/sdkman-init.sh"
+source /usr/local/Cellar/awscli/1.11.150/bin/aws_zsh_completer.sh
