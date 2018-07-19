@@ -34,7 +34,8 @@
   qmt = "!git checkout $1;git mt @{-1}"
   s = status --short --branch
   sd = !clear && git s && git diff --word-diff=color
-  sh = !clear && git show --histogram --word-diff=color
+  sh = !clear && git show --histogram
+  sl = !clear && git show --histogram
   sp = stash pop
   st  = stash --include-untracked
   undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
