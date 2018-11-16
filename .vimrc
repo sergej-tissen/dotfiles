@@ -25,15 +25,12 @@ Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
 Plugin 'junegunn/rainbow_parentheses.vim'
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&\=. key: Ina, a|, in'
-" Plugin 'SirVer/ultisnips' "snippet Engine, key: ctrl-c ctrl-x
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
 Plugin 'vim-airline/vim-airline' "Statusbar
 Plugin 'vim-airline/vim-airline-themes' "Theme for airline
 Plugin 'alvan/vim-closetag' "key: > , new line with indent: >>
-Plugin 'altercation/vim-colors-solarized' "solarized Theme
 Plugin 'tpope/vim-commentary' "comment, uncomment lines key: gc gcc
 Plugin 'easymotion/vim-easymotion' "faster navigation. key: <leader>motion
-Plugin 'isRuslan/vim-es6' "es6 snippets
 Plugin 'tommcdo/vim-exchange' "switch two text objects, key: cx
 " fugitive: Git support. command :Git command % ( % = current file), :Gblame, :Gdiff, :Gwrite (git add %),
 " :Gread (git checkout %), :Gremove, :Gmove /project-root, za open/close fold,
@@ -44,14 +41,11 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter' "show git status. key: <leader>hh hk, hp preview hunk, hs stage hunk, hu undo hunk
 Plugin 'tpope/vim-repeat' "use . to repeat plugin motions
 Plugin 'kshenoy/vim-signature' "show marks. key: remove mark: dm[mark], delete all marks in buffer: m<space>
-Plugin 'honza/vim-snippets' "snippets
 Plugin 'tpope/vim-surround' "surrounding tags, brackets etc. key: ys cs ds Visual Mode: S
-Plugin 'godlygeek/tabular' "align by a pattern. :Tab /x (x is regex by which to align. ie. = or , or |)
 Plugin 'kana/vim-textobj-entire' "Object for entire file. key: ae ie (omit empty lines at start or end)
 Plugin 'kana/vim-textobj-indent' "Object for indentation level. key: ai (with sub indents), aI (only current indent level)
 Plugin 'kana/vim-textobj-user'
 Plugin 'tpope/vim-unimpaired' "Navigate quickfix window. key []q :cnext, :cprevious, Q :cfirst, :clast, b Buffer, e exchange x lines
-" Plugin 'Valloric/YouCompleteMe' "Code completion
 " Language Plugins
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
@@ -59,7 +53,6 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'honza/dockerfile.vim'
 Plugin 'elzr/vim-json'
 Plugin 'stephpy/vim-yaml'
-Plugin 'hashivim/vim-hashicorp-tools'
 
 call vundle#end()
 " Brief help
@@ -118,9 +111,6 @@ set diffopt=filler,vertical
 
 " Layout
 syntax enable
-set t_Co=16 " 16 colors
-set background=dark
-colorscheme solarized
 set cursorline
 set list "show tab and trailing space symbols
 set listchars=tab:▸\ ,trail:·
@@ -209,13 +199,6 @@ let g:ctrlp_by_filename = 1
 " index all files
 let g:ctrlp_max_files=0
 
-" " YCM
-" nnoremap <silent><leader>rf :YcmCompleter GoTo<CR>
-" nnoremap <leader>rn :YcmCompleter RefactorRename<Space>
-" set completeopt-=preview
-" " show autocompletion for css
-" let g:ycm_semantic_triggers = {'css': [ 're!^\s{2}', 're!:\s+' ],}
-
 " Easymotion
 let g:EasyMotion_smartcase = 1
 map <Leader> <Plug>(easymotion-prefix)
@@ -227,9 +210,6 @@ map n <Plug>(easymotion-next)
 map N <Plug>(easymotion-prev)
 let g:EasyMotion_use_upper = 1
 let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ;'
-highlight! link EasyMotionIncSearch IncSearch
-highlight! link EasyMotionTarget2First IncSearch
-highlight! link EasyMotionTarget2Second IncSearch
 
 " Airline
 let g:airline_theme = 'bubblegum'
@@ -269,11 +249,6 @@ cnoreabbrev Ack Ack!
 nnoremap <Leader>aa :Ack!<Space>
 nnoremap <Leader>aw :Ack!<Space><C-R><C-W><CR>
 vnoremap <Leader>av y:Ack!<Space>"<C-R>""<CR>
-
-" " UltiSnips
-" let g:UltiSnipsExpandTrigger="<C-c>"
-" let g:UltiSnipsJumpForwardTrigger="<C-c>"
-" let g:UltiSnipsJumpBackwardTrigger="<C-x>"
 
 " Ale
 let g:ale_linters = {
