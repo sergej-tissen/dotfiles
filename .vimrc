@@ -22,7 +22,7 @@ Plugin 'Raimondi/delimitMate' "autocomplete brackets
 Plugin 'sjl/gundo.vim' "show undo tree. key: <leader>u
 Plugin 'tmhedberg/matchit' " % for tags
 Plugin 'scrooloose/nerdtree' "file drawer (leader)<c-n>
-Plugin 'junegunn/rainbow_parentheses.vim'
+Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'vim-scripts/ReplaceWithRegister' "gr... to replace and keep content in registry. key: gr[modtion], grr (line)
 Plugin 'wellle/targets.vim' "Last, Next for Targests. Argument Obejct a. Separator Objects: ,.;:+|&\=. key: Ina, a|, in'
 Plugin 'FooSoft/vim-argwrap' "Wrap/Unwrap arguments. key: <leader>gw
@@ -270,12 +270,10 @@ nmap <leader>hk <Plug>GitGutterPrevHunk
 let g:vim_markdown_folding_disabled = 1
 
 " Rainbow Parentheses
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
-let g:rainbow#blacklist = [237, 238]
-augroup rainbow_lisp
-  autocmd!
-  autocmd FileType javascript,json,css RainbowParentheses
-augroup END
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " Closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.ejs,*.xml"
