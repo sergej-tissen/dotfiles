@@ -42,6 +42,10 @@ export EDITOR=vim
 
 PATH="$HOME/.local/bin:$HOME/Library/Python/2.7/bin:$PATH"
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/sergej/.sdkman"
 [[ -s "/Users/sergej/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sergej/.sdkman/bin/sdkman-init.sh"
