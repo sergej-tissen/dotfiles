@@ -1,9 +1,10 @@
 [user]
-  name = Sergej Tissen
-  email = sergej.tissen@gmail.com
+	name = Sergej Tissen
+	email = sergej.tissen@gmail.com
 [core]
   editor = vim
   autocrlf = input
+	excludesfile = /Users/sergej/.gitignore_global
 [help]
   autocorrect = 1
 [color]
@@ -40,6 +41,7 @@
   st  = stash --include-untracked
   undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
   work = config --local user.email "sergej.tissen@codecentric.de"
+  project = config --local user.email "s.tissen@hse24.de"
 [merge]
   tool = vimdiff
   conflictstyle = diff3
@@ -58,3 +60,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/sergej/.stCommitMsg
