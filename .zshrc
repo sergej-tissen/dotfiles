@@ -49,4 +49,4 @@ source ~/.nvm/nvm.sh
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/sergej/.sdkman"
 [[ -s "/Users/sergej/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sergej/.sdkman/bin/sdkman-init.sh"
-source /usr/local/Cellar/awscli/1.16.190/libexec/bin/aws_zsh_completer.sh
+source /usr/local/Cellar/awscli/2.0.0/libexec/bin/aws_zsh_completer.sh

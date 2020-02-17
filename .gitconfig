@@ -10,7 +10,7 @@
 [color]
   ui = auto
 [push]
-  default = simple
+	default = current
 [alias]
   aa = !git add . && git status
   au = !git add -u . && git status
