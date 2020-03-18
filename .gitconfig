@@ -62,3 +62,5 @@
 	trustExitCode = true
 [commit]
 	template = /Users/sergej/.stCommitMsg
+[branch]
+	autoSetupMerge = always
