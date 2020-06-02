@@ -31,6 +31,7 @@
   mt = merge --no-ff
   p = pull --all -p
   pr = pull --rebase
+  pu = push -u origin HEAD
   qmf = "!git checkout $1;git mf @{-1}"
   qmt = "!git checkout $1;git mt @{-1}"
   s = status --short --branch
