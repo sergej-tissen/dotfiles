@@ -11,6 +11,8 @@
   ui = auto
 [push]
 	default = current
+[pull]
+	ff = only
 [alias]
   aa = !git add . && git status
   au = !git add -u . && git status
