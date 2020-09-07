@@ -49,6 +49,7 @@
   tool = vimdiff
   conflictstyle = diff3
   keepBackup = false
+  ff = no
 [mergetool]
   prompt = false
 [diff]
