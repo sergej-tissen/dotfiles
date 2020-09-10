@@ -33,6 +33,7 @@ alias cdw='cd ~/workspace'
 alias cdp='cd $(git rev-parse --show-toplevel)' # goto git project root
 alias cdl='cd -'                            # goto last folder
 alias pip='pip2.7'
+alias k='kubectl'
 
 function chpwd() {
   ls -a
@@ -50,3 +51,5 @@ source ~/.nvm/nvm.sh
 export SDKMAN_DIR="/Users/sergej/.sdkman"
 [[ -s "/Users/sergej/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sergej/.sdkman/bin/sdkman-init.sh"
 source /usr/local/Cellar/awscli/2.0.33/libexec/bin/aws_zsh_completer.sh
+
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
