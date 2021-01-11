@@ -44,7 +44,6 @@
   st  = stash --include-untracked
   undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
   work = config --local user.email "sergej.tissen@codecentric.de"
-  nc = config --local user.email "needcentric@gmail.com"
 [merge]
   tool = vimdiff
   conflictstyle = diff3
