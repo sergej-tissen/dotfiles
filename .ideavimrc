@@ -28,5 +28,5 @@ nnoremap <C-l> <C-w>l
 " => IntelliJ Actions
 " List of Actions: https://centic9.github.io/IntelliJ-Action-IDs/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap n :action FindNext<CR>
-nnoremap N :action FindPrevious<CR>
+" nnoremap n :action FindNext<CR>
+" nnoremap N :action FindPrevious<CR>

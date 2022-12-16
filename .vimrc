@@ -112,6 +112,7 @@ set diffopt=filler,vertical
 " Layout
 syntax enable
 set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
 set list "show tab and trailing space symbols
 set listchars=tab:▸\ ,trail:·
 

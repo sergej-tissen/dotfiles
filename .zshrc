@@ -29,7 +29,7 @@ alias fci='find . -iname'                   # search for files in current folder
 alias vi='vim'
 alias iv='vim'
 alias cdd='cd ~/dotfiles'
-alias cdw='cd ~/workspace/hse'
+alias cdw='cd ~/workspace/playground'
 alias cdp='cd $(git rev-parse --show-toplevel)' # goto git project root
 alias cdl='cd -'                            # goto last folder
 alias pip='pip2.7'
@@ -41,7 +41,8 @@ function chpwd() {
 
 export EDITOR=vim
 
-PATH="$HOME/.local/bin:$HOME/Library/Python/2.7/bin:$PATH"
+PATH="$HOME/.local/bin:$HOME/Library/Python/2.7/bina:/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
 
 #nvm
 export NVM_DIR=~/.nvm
@@ -50,6 +51,6 @@ source ~/.nvm/nvm.sh
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/sergej/.sdkman"
 [[ -s "/Users/sergej/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sergej/.sdkman/bin/sdkman-init.sh"
-source /usr/local/Cellar/awscli/2.0.33/libexec/bin/aws_zsh_completer.sh
+source /usr/local/Cellar/awscli/2.9.2/libexec/bin/aws_zsh_completer.sh
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
