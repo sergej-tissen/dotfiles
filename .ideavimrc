@@ -1,4 +1,5 @@
-let mapleader=" " "set leader key to space
+" set leader key to space
+let mapleader=" "
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
@@ -6,7 +7,7 @@ let mapleader=" " "set leader key to space
 
 set easymotion "vim-easymotion
 let g:EasyMotion_smartcase = 1
-map <Leader> <Plug>(easymotion-prefix)
+map <leader> <Plug>(easymotion-prefix)
 map <leader>/ <Plug>(easymotion-sn)\v
 omap <leader>/ <Plug>(easymotion-tn)\v
 map n <Plug>(easymotion-next)
@@ -14,25 +15,28 @@ map N <Plug>(easymotion-prev)
 let g:EasyMotion_use_upper = 1
 let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ;'
 
-set exchange "vim-exchange cxiw .
+set exchange " vim-exchange cxiw .
 
-Plug 'tpope/vim-commentary' "gcc
-Plug 'michaeljsmith/vim-indent-object' vaI vii
-Plug 'vim-textobj-entire' "vae
-Plug 'vim-scripts/argtextobj.vim' "vaa via
-Plug 'vim-scripts/ReplaceWithRegister' "grr
+Plug 'tpope/vim-commentary' " gcc
+Plug 'michaeljsmith/vim-indent-object' " vaI vii
+Plug 'vim-textobj-entire' " va
+Plug 'vim-scripts/argtextobj.vim' " vaa via
+Plug 'vim-scripts/ReplaceWithRegister' " grr
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set clipboard=unnamed "copy to system clipboard
-set gdefault "substitue globally on lines %s/a/b/ instead %s/a/b/g
-set surround "vim-surround plugin
-set scrolloff=5 "5 rows offset when scrolling
-noremap Y y$ "Y behaves like C and D
+set clipboard=unnamed " copy to system clipboard
+set gdefault " substitue globally on lines %s/a/b/ instead %s/a/b/g
+set surround " vim-surround plugin
+set scrolloff=5 " 5 rows offset when scrolling
+" Y behaves like C and D
+noremap Y y$
 
-nnoremap <leader>r :source ~/.ideavimrc<CR>  " Reload .ideavimrc
-nnoremap <leader>i :e ~/.ideavimrc<CR> "edit .ideavimrc
+" Reload .ideavimrc
+nnoremap <leader>r :source ~/.ideavimrc<CR>
+" edit .ideavimrc
+nnoremap <leader>i :e ~/.ideavimrc<CR>
 
 " Move between Panes
 nnoremap <C-j> <C-w>j
@@ -44,5 +48,8 @@ nnoremap <C-l> <C-w>l
 " => IntelliJ Actions
 " List of Actions: https://centic9.github.io/IntelliJ-Action-IDs/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map / :action AceAction<CR> "use AceJump for default search
+
+" use AceJump for default search
+map / :action AceAction<CR>
+nmap <leader>h :action HideAllWindows<CR>
 nmap <leader>z :action ToggleZenMode<CR>
