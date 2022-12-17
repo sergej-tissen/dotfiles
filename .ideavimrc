@@ -1,9 +1,28 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" IdeaVim
+let mapleader=" "
+
 " AceJump
 map / :action AceAction<CR>
+
+set easymotion "vim-easymotion
+let g:EasyMotion_smartcase = 1
+map <Leader> <Plug>(easymotion-prefix)
+map <leader>/ <Plug>(easymotion-sn)\v
+omap <leader>/ <Plug>(easymotion-tn)\v
+map n <Plug>(easymotion-next)
+map N <Plug>(easymotion-prev)
+let g:EasyMotion_use_upper = 1
+let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ;'
+
+set exchange "vim-exchange cxiw .
+
+Plug 'tpope/vim-commentary' "gcc
+Plug 'michaeljsmith/vim-indent-object' vaI vii
+Plug 'vim-textobj-entire' "vae
+Plug 'vim-scripts/argtextobj.vim' "vaa via
+Plug 'vim-scripts/ReplaceWithRegister' "grr
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -11,12 +30,10 @@ map / :action AceAction<CR>
 set clipboard=unnamed "copy to system clipboard
 set gdefault "substitue globally on lines %s/a/b/ instead %s/a/b/g
 set surround "vim-surround plugin
-" 5 rows offset when scrolling
-set scrolloff=5
-" Y behaves like C and D
-noremap Y y$
-" Reload .ideavimrc
-nnoremap <Space>r :source ~/.ideavimrc<CR>
+set scrolloff=5 "5 rows offset when scrolling
+noremap Y y$ "Y behaves like C and D
+ " Reload .ideavimrc
+nnoremap <leader>r :source ~/.ideavimrc<CR>
 
 " Move between Panes
 nnoremap <C-j> <C-w>j
@@ -28,5 +45,3 @@ nnoremap <C-l> <C-w>l
 " => IntelliJ Actions
 " List of Actions: https://centic9.github.io/IntelliJ-Action-IDs/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nnoremap n :action FindNext<CR>
-" nnoremap N :action FindPrevious<CR>
