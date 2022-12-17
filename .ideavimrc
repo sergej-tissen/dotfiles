@@ -1,10 +1,8 @@
+let mapleader=" " "set leader key to space
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader=" "
-
-" AceJump
-map / :action AceAction<CR>
 
 set easymotion "vim-easymotion
 let g:EasyMotion_smartcase = 1
@@ -32,8 +30,9 @@ set gdefault "substitue globally on lines %s/a/b/ instead %s/a/b/g
 set surround "vim-surround plugin
 set scrolloff=5 "5 rows offset when scrolling
 noremap Y y$ "Y behaves like C and D
- " Reload .ideavimrc
-nnoremap <leader>r :source ~/.ideavimrc<CR>
+
+nnoremap <leader>r :source ~/.ideavimrc<CR>  " Reload .ideavimrc
+nnoremap <leader>i :e ~/.ideavimrc<CR> "edit .ideavimrc
 
 " Move between Panes
 nnoremap <C-j> <C-w>j
@@ -45,3 +44,5 @@ nnoremap <C-l> <C-w>l
 " => IntelliJ Actions
 " List of Actions: https://centic9.github.io/IntelliJ-Action-IDs/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map / :action AceAction<CR> "use AceJump for default search
+nmap <leader>z :action ToggleZenMode<CR>
