@@ -52,4 +52,4 @@ nnoremap <C-l> <C-w>l
 " use AceJump for default search
 map / :action AceAction<CR>
 nmap <leader>h :action HideAllWindows<CR>
-nmap <leader>z :action ToggleZenMode<CR>
+nmap <leader>z :action ToggleDistractionFreeMode<CR>
