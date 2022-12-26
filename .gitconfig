@@ -22,7 +22,7 @@
   caam = commit -a --amend --no-edit
   co = checkout
   col = checkout -
-  com = checkout master
+  com = checkout main
   df = !clear && git diff --word-diff=color
   dfs = !clear && git diff --word-diff=color --staged
   f = fetch --all -p
