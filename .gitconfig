@@ -16,6 +16,7 @@
 [alias]
   aa = !git add . && git status
   au = !git add -u . && git status
+  bd = !git branch -D
   c = commit -m
   ca = commit -am
   cam = commit --amend --no-edit
