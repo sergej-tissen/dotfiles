@@ -36,6 +36,8 @@
   p = pull --all -p
   pr = pull --rebase
   pu = push -u origin HEAD
+  puf = push -u origin HEAD --force-with-lease
+  puff = push -u origin HEAD --force
   qmf = "!git checkout $1;git mf @{-1}"
   qmt = "!git checkout $1;git mt @{-1}"
   s = status --short --branch
