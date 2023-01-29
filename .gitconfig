@@ -71,3 +71,5 @@
 	template = /Users/sergej/.stCommitMsg
 [branch]
 	autoSetupMerge = always
+[init]
+	defaultBranch = main
