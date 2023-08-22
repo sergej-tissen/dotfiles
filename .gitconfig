@@ -2,7 +2,7 @@
 	name = Sergej Tissen
 	email = sergej.tissen@gmail.com
 [core]
-  editor = vim
+  editor = code --wait
   autocrlf = input
 	excludesfile = /Users/sergej/.gitignore_global
 [help]
@@ -49,27 +49,31 @@
   undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
   private = config --local user.email "sergej.tissen@gmail.com"
 [merge]
-  tool = vimdiff
+  tool = vscode
   conflictstyle = diff3
   keepBackup = false
   ff = no
-[mergetool]
+[mergetool "vscode"]
   prompt = false
+  cmd = code --wait $MERGED
 [diff]
+  tool = vscode
   algorithm = histogram
 [rerere]
   enabled = true
 [credential]
 	helper = osxkeychain
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [commit]
 	template = /Users/sergej/.stCommitMsg
 [branch]
 	autoSetupMerge = always
 [init]
 	defaultBranch = main
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

@@ -32,6 +32,7 @@ alias cdd='cd ~/dotfiles'
 alias cdw='cd ~/workspace'
 alias cdp='cd $(git rev-parse --show-toplevel)' # goto git project root
 alias cdl='cd -'                            # goto last folder
+alias ci='code-insiders'                            # open vscode insiders
 
 function chpwd() {
   ls -a
@@ -49,3 +50,6 @@ source ~/.nvm/nvm.sh
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/sergej/.sdkman"
 [[ -s "/Users/sergej/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sergej/.sdkman/bin/sdkman-init.sh"
+
+# GitHub Copilog CLI
+eval "$(github-copilot-cli alias -- "$0")"
